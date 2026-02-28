@@ -1,37 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8" />
-  <title>TCPioneer Learn</title>
+<html lang="en">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCPioneer Learn</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #0b0b10;
+        }
+
+        /* GRID BACKGROUND */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -2;
+        }
+
+        /* GLOW TEXT */
+        .glow {
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+        }
+
+        /* FLOAT ANIMATION */
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
 </head>
 
-<body class="bg-[#0b0b12] text-white flex">
+<body class="text-white overflow-x-hidden">
 
-  <!-- Sidebar -->
-  <aside class="w-64 h-screen bg-white/5 backdrop-blur-xl border-r border-white/10 p-4 fixed">
-    <h2 class="text-xl font-bold text-violet-400 mb-6">TCPioneer Learn</h2>
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full px-6 md:px-16 py-4 flex justify-between items-center z-50 bg-[#0b0b10]/80 backdrop-blur border-b border-white/5">
 
-    <p class="text-xs text-gray-400 mb-2">HANDBOOKS</p>
-    <div id="sidebar-links" class="space-y-1"></div>
-  </aside>
+        <div class="text-violet-500 font-semibold text-xl">TCPioneer Learn</div>
 
-  <!-- Content -->
-  <main class="ml-64 p-10 w-full">
-    <h1 class="text-4xl font-bold text-violet-400 mb-4">
-      Welcome to TCPioneer Learn 🚀
-    </h1>
+        <div class="hidden md:flex gap-8 text-gray-400">
+            <a href="https://tcpioneer.org" class="hover:text-white">Main Site</a>
+            <a href="https://tcpioneer.org/joinus" target="_blank"
+                class="border border-violet-500 px-4 py-1 rounded-md text-violet-500 hover:bg-violet-500 hover:text-black transition">
+                Join Us
+            </a>
+        </div>
 
-    <p class="text-gray-400 mb-6">
-      Structured handbooks for Git, Linux, Networking & Cybersecurity.
-    </p>
+    </nav>
 
-    <div class="bg-violet-500/10 border border-violet-400/20 p-4 rounded-xl">
-      Clean, fast, and developer-friendly documentation system.
-    </div>
-  </main>
+    <!-- HERO -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
 
-  <script src="/components/sidebar.js"></script>
+        <div class="max-w-2xl flex flex-col items-center gap-8">
+
+            <!-- ICON -->
+            <div class="text-violet-500 text-7xl float">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <!-- TITLE -->
+            <h1 class="text-4xl md:text-6xl font-semibold glow leading-tight">
+                TCPioneer Learn
+            </h1>
+
+            <!-- TAGLINE -->
+            <p class="text-xl text-gray-300">
+                Learn • Build • Secure
+            </p>
+
+            <!-- MESSAGE -->
+            <p class="text-gray-400 text-lg leading-relaxed">
+                A complete learning platform for cybersecurity, development, and real-world skills.
+                <br>
+                📚 Courses, guides, and hands-on labs are coming soon.
+            </p>
+
+            <!-- FEATURES PREVIEW -->
+            <div class="flex flex-wrap justify-center gap-3 text-sm text-gray-300">
+
+                <span class="px-3 py-1 border border-white/10 rounded-full">Cybersecurity Basics</span>
+                <span class="px-3 py-1 border border-white/10 rounded-full">Bug Bounty</span>
+                <span class="px-3 py-1 border border-white/10 rounded-full">Web Security</span>
+                <span class="px-3 py-1 border border-white/10 rounded-full">Hands-on Labs</span>
+
+            </div>
+
+            <!-- STATUS -->
+            <div class="px-4 py-2 border border-violet-500 text-violet-400 rounded-full text-sm">
+                🚧 Learning Platform in Development
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="flex gap-4 flex-wrap justify-center pt-4">
+
+                <a href="https://tcpioneer.org"
+                    class="px-6 py-3 bg-violet-500 text-black rounded-md hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] transition">
+                    Go to Main Site
+                </a>
+
+                <a href="https://tcpioneer.org/joinus" target="_blank"
+                    class="px-6 py-3 border border-violet-500 text-violet-500 rounded-md hover:bg-violet-500 hover:text-black transition">
+                    Join Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-6 px-6 md:px-16 flex justify-between items-center">
+
+        <div class="text-gray-400 text-sm">
+            © 2026 TCPioneer Learn • Learn • Build • Secure
+        </div>
+
+        <div class="flex gap-5 text-gray-400 text-lg">
+            <a href="https://www.instagram.com/tcpioneerorg" target="_blank">
+                <i class="fab fa-instagram hover:text-pink-500"></i>
+            </a>
+            <a href="https://www.facebook.com/tcpioneerorg" target="_blank">
+                <i class="fab fa-facebook hover:text-blue-500"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/tcpioneerorg" target="_blank">
+                <i class="fab fa-linkedin hover:text-blue-400"></i>
+            </a>
+        </div>
+
+    </footer>
+
 </body>
+
 </html>
