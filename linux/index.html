@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Linux Handbook</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body class="bg-[#0b0b12] text-white flex">
+
+  <aside class="w-64 h-screen bg-white/5 backdrop-blur-xl border-r border-white/10 p-4 fixed">
+    <h2 class="text-xl font-bold text-violet-400 mb-6">TCPioneer Learn</h2>
+    <p class="text-xs text-gray-400 mb-2">HANDBOOKS</p>
+    <div id="sidebar-links" class="space-y-1"></div>
+  </aside>
+
+  <main class="ml-64 p-10 w-full">
+    <div id="content" class="prose prose-invert max-w-none"></div>
+  </main>
+
+  <script src="/components/sidebar.js"></script>
+  <script src="/components/markdown.js"></script>
+
+  <script>
+    loadMarkdown('/content/linux.md');
+  </script>
+
+</body>
+</html>
