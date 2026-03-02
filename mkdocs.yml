@@ -1,0 +1,80 @@
+site_name: TCP Handbook
+site_description: Cybersecurity & Linux Learning Platform
+site_author: TC Pioneer
+site_url: https://learn.tcpioneer.org
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+
+  palette:
+    - scheme: slate
+      primary: black
+      accent: blue
+
+  font:
+    text: Roboto
+    code: JetBrains Mono
+
+  features:
+    # - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/custom.js
+
+nav:
+  - "<i class='fa-solid fa-house'></i> Home": index.md
+
+  - "<i class='fa-brands fa-linux'></i> Linux":
+      - Introduction: linux/intro.md
+      - Setup & Access: linux/setup.md
+      - Basic Commands: linux/commands.md
+      - File System & Permissions: linux/filesystem.md
+      - Advanced & Concepts: linux/advanced.md
+
+  - "<i class='fa-brands fa-github'></i>Git & GitHub":
+      - Introduction: github/intro.md
+      - Setup & Config: github/setup.md
+      - Basic Commands: github/commands.md
+      - Branching & Merging: github/branching.md
+      - Advanced & Concepts: github/advanced.md
+
+  - "<i class='fa-brands fa-docker'></i> Docker":
+      - Introduction: docker/intro.md
+      - Setup & Installation: docker/setup.md
+      - Basic Commands: docker/commands.md
+      - Images & Containers: docker/images-containers.md
+      - Advanced & Concepts: docker/advanced.md
+
+
+  - "<i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools":
+      - Nmap: kali/nmap.md
+      - Wireshark: kali/wireshark.md
+      - Metasploit: kali/metasploit.md
+      - Burp Suite: kali/burp.md
+      - Hydra: kali/hydra.md
+      - Netcat: kali/netcat.md
+
+  - "<i class='fa-solid fa-globe'></i> Networking":
+      - Introduction: networking/intro.md
+      - IP Addressing: networking/ip.md
+      - Protocols: networking/protocols.md
+      - Ports: networking/ports.md
+      - Commands: networking/commands.md
