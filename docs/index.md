@@ -54,3 +54,11 @@ Visit the main platform for more resources and updates.
 ## Conclusion
 
 This handbook is designed to guide you through essential concepts in Linux and cybersecurity. Whether you are just starting or looking to deepen your knowledge, TC Pioneer provides a structured path to help you grow.
+
+<div style="background: #3a2424; border-radius: 8px; padding: 18px; margin: 20px 0; border-left: 5px solid #ff4d4d; color: #e6e6e6;">
+<strong>⚠ Important Notice</strong><br><br>
+
+The purpose of this platform is to educate and share knowledge about cybersecurity and penetration testing. Any misuse of the information provided is strictly the responsibility of the individual.
+
+Always practice ethical hacking and use these techniques only in legal environments such as labs, CTF platforms, or authorized systems.
+</div>

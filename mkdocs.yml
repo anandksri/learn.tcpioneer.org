@@ -63,18 +63,30 @@ nav:
       - Images & Containers: docker/images-containers.md
       - Advanced & Concepts: docker/advanced.md
 
+  - "<i class='fa-brands fa-internet-explorer'></i> TCP/IP & OSI ":
+      - OSI Layer: tcpip/osi.md
+      - IPv4 and IPv6 addresses: tcpip/ipv4-ipv6.md
+      - Router, Switch and Hub: tcpip/router-switch-hub.md
 
   - "<i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools":
       - Nmap: kali/nmap.md
+      - Nikto: kali/nikto.md
+      - Hydra: kali/hydra.md
+      - SQLmap: kali/sqlmap.md
+      - Netcat: kali/netcat.md
+      - Hashcat: kali/hashcat.md
+      - Gobuster: kali/gobuster.md
       - Wireshark: kali/wireshark.md
       - Metasploit: kali/metasploit.md
       - Burp Suite: kali/burp.md
-      - Hydra: kali/hydra.md
-      - Netcat: kali/netcat.md
+      - Aircrack-ng: kali/aircrack-ng.md
+      - John the Ripper: kali/john-the-ripper.md
 
   - "<i class='fa-solid fa-globe'></i> Networking":
-      - Introduction: networking/intro.md
-      - IP Addressing: networking/ip.md
-      - Protocols: networking/protocols.md
-      - Ports: networking/ports.md
-      - Commands: networking/commands.md
+      - Network Discovery Protocols: networking/discovery.md
+      - Network Architectures, Mapping and Target Identification: networking/mapping.md
+      - Network Scanning and Fingerprinting: networking/scanning.md
+      - Testing Network Services: networking/testing.md
+
+  - "<i class='fa-solid fa-shield-alt'></i> Cryptography":
+      - Cryptography Basics: cryptography/basics.md
