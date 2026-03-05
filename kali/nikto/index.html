@@ -12,13 +12,13 @@
         <meta name="author" content="TC Pioneer">
       
       
-        <link rel="canonical" href="https://learn.tcpioneer.org/docker/advanced/">
+        <link rel="canonical" href="https://learn.tcpioneer.org/kali/nikto/">
       
       
-        <link rel="prev" href="../images-containers/">
+        <link rel="prev" href="../nmap/">
       
       
-        <link rel="next" href="../../tcpip/osi/">
+        <link rel="next" href="../hydra/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Advanced & Concepts - TCP Handbook</title>
+        <title>Nikto - TCP Handbook</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#advanced-concepts" class="md-skip">
+        <a href="#nikto" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Advanced & Concepts
+              Nikto
             
           </span>
         </div>
@@ -640,20 +640,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -674,7 +672,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -692,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../docker/intro/" class="md-nav__link">
         
   
   
@@ -720,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../docker/setup/" class="md-nav__link">
         
   
   
@@ -748,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
+      <a href="../../docker/commands/" class="md-nav__link">
         
   
   
@@ -776,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../images-containers/" class="md-nav__link">
+      <a href="../../docker/images-containers/" class="md-nav__link">
         
   
   
@@ -801,37 +799,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Advanced & Concepts
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../docker/advanced/" class="md-nav__link">
         
   
   
@@ -847,125 +818,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dockerfile
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Volumes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Networks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#port-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Port Mapping
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restart-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restart Container
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-all-containers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove All Containers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-all-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove All Images
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simple Flow
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1120,18 +972,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1152,7 +1006,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1170,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/nmap/" class="md-nav__link">
+      <a href="../nmap/" class="md-nav__link">
         
   
   
@@ -1195,10 +1049,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../kali/nikto/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nikto
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1214,6 +1095,230 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-nikto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Nikto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-nikto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Nikto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-a-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan a Website
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-a-specific-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan a Specific Port
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-with-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan with SSL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-scan-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save Scan Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specify-output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specify Output Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-multiple-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan Multiple Targets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display Plugins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Identify Target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-nikto-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Run Nikto Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-review-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Review Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-investigate-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Investigate Vulnerabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1226,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/hydra/" class="md-nav__link">
+      <a href="../hydra/" class="md-nav__link">
         
   
   
@@ -1254,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/sqlmap/" class="md-nav__link">
+      <a href="../sqlmap/" class="md-nav__link">
         
   
   
@@ -1282,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/netcat/" class="md-nav__link">
+      <a href="../netcat/" class="md-nav__link">
         
   
   
@@ -1310,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/hashcat/" class="md-nav__link">
+      <a href="../hashcat/" class="md-nav__link">
         
   
   
@@ -1338,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/gobuster/" class="md-nav__link">
+      <a href="../gobuster/" class="md-nav__link">
         
   
   
@@ -1366,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/wireshark/" class="md-nav__link">
+      <a href="../wireshark/" class="md-nav__link">
         
   
   
@@ -1394,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/metasploit/" class="md-nav__link">
+      <a href="../metasploit/" class="md-nav__link">
         
   
   
@@ -1422,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/burp/" class="md-nav__link">
+      <a href="../burp/" class="md-nav__link">
         
   
   
@@ -1450,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/aircrack-ng/" class="md-nav__link">
+      <a href="../aircrack-ng/" class="md-nav__link">
         
   
   
@@ -1478,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kali/john-the-ripper/" class="md-nav__link">
+      <a href="../john-the-ripper/" class="md-nav__link">
         
   
   
@@ -1781,10 +1886,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
+  <a href="#what-is-nikto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dockerfile
+        What is Nikto
       
     </span>
   </a>
@@ -1792,10 +1897,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
+  <a href="#install-nikto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Volumes
+        Install Nikto
       
     </span>
   </a>
@@ -1803,10 +1908,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#networks" class="md-nav__link">
+  <a href="#basic-syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Networks
+        Basic Syntax
       
     </span>
   </a>
@@ -1814,10 +1919,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#port-mapping" class="md-nav__link">
+  <a href="#scan-a-website" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Port Mapping
+        Scan a Website
       
     </span>
   </a>
@@ -1825,10 +1930,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
+  <a href="#scan-a-specific-port" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logs
+        Scan a Specific Port
       
     </span>
   </a>
@@ -1836,10 +1941,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#restart-container" class="md-nav__link">
+  <a href="#scan-with-ssl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Restart Container
+        Scan with SSL
       
     </span>
   </a>
@@ -1847,10 +1952,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remove-all-containers" class="md-nav__link">
+  <a href="#save-scan-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Remove All Containers
+        Save Scan Results
       
     </span>
   </a>
@@ -1858,10 +1963,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remove-all-images" class="md-nav__link">
+  <a href="#specify-output-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Remove All Images
+        Specify Output Format
       
     </span>
   </a>
@@ -1869,10 +1974,115 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
+  <a href="#scan-multiple-targets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simple Flow
+        Scan Multiple Targets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display Plugins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Identify Target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-nikto-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Run Nikto Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-review-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Review Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-investigate-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Investigate Vulnerabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
       
     </span>
   </a>
@@ -1896,58 +2106,182 @@
 
 
 
-<h1 id="advanced-concepts">Advanced Concepts</h1>
-<h2 id="dockerfile">Dockerfile</h2>
+<h1 id="nikto">Nikto</h1>
+<h2 id="what-is-nikto">What is Nikto</h2>
 <ul>
-<li>file used to build docker images</li>
+<li><strong>Nikto</strong> is an open-source <strong>web server vulnerability scanner</strong>.</li>
+<li>It is used to identify <strong>security issues, misconfigurations, outdated software, and dangerous files on web servers</strong>.</li>
+<li>Nikto is widely used by:</li>
+<li>penetration testers</li>
+<li>cybersecurity professionals</li>
+<li>bug bounty hunters</li>
+<li>ethical hackers</li>
+<li>CTF players</li>
 </ul>
-<p>example:</p>
-<p>FROM ubuntu<br />
-RUN apt update<br />
-CMD ["echo", "hello"]</p>
-<hr />
-<h2 id="volumes">Volumes</h2>
+<p>Nikto performs automated checks for:</p>
 <ul>
-<li>used to store data permanently</li>
-<li>data is not lost when container stops</li>
+<li>outdated server software</li>
+<li>dangerous files and scripts</li>
+<li>default configuration issues</li>
+<li>insecure HTTP headers</li>
+<li>known vulnerabilities</li>
 </ul>
+<p>Because of its wide vulnerability database, Nikto is considered a <strong>useful reconnaissance tool in web application security testing</strong>.</p>
 <hr />
-<h2 id="networks">Networks</h2>
+<h2 id="install-nikto">Install Nikto</h2>
+<p>Nikto is usually pre-installed in <strong>Kali Linux</strong>.</p>
+<p>To verify installation:</p>
+<div class="highlight"><pre><span></span><code>nikto -Version
+</code></pre></div>
+<p>If Nikto is not installed:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install nikto
+</code></pre></div>
+<hr />
+<h2 id="basic-syntax">Basic Syntax</h2>
+<p>Basic Nikto command:</p>
+<div class="highlight"><pre><span></span><code>nikto -h &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://example.com
+</code></pre></div>
+<p>Nikto will scan the web server and report:</p>
 <ul>
-<li>used for communication between containers</li>
+<li>vulnerabilities</li>
+<li>server configuration issues</li>
+<li>potential security risks</li>
 </ul>
 <hr />
-<h2 id="port-mapping">Port Mapping</h2>
+<h2 id="scan-a-website">Scan a Website</h2>
+<p>To scan a website for vulnerabilities:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://example.com
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://192.168.1.10
+</code></pre></div>
+<p>Nikto will analyze:</p>
 <ul>
-<li>connect container port to host</li>
+<li>HTTP headers</li>
+<li>server software</li>
+<li>known vulnerable scripts</li>
 </ul>
-<div class="highlight"><pre><span></span><code>docker run -p 8080:80 &lt;image-name&gt;
+<hr />
+<h2 id="scan-a-specific-port">Scan a Specific Port</h2>
+<p>If a web service runs on a custom port:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://example.com -p &lt;port&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://192.168.1.10 -p 8080
+</code></pre></div>
+<p>This scans the service running on <strong>port 8080</strong>.</p>
+<hr />
+<h2 id="scan-with-ssl">Scan with SSL</h2>
+<p>To scan HTTPS services:</p>
+<div class="highlight"><pre><span></span><code>nikto -h https://example.com
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nikto -h https://example.com
+</code></pre></div>
+<p>Nikto will test <strong>SSL-enabled web servers</strong>.</p>
+<hr />
+<h2 id="save-scan-results">Save Scan Results</h2>
+<p>To save scan results:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://example.com -o result.txt
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://example.com -o scan_result.txt
+</code></pre></div>
+<p>This saves the scan output to a file.</p>
+<hr />
+<h2 id="specify-output-format">Specify Output Format</h2>
+<p>Nikto supports multiple output formats.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nikto -h http://example.com -Format html -o report.html
+</code></pre></div>
+<p>Supported formats:</p>
+<ul>
+<li>txt</li>
+<li>html</li>
+<li>csv</li>
+<li>xml</li>
+</ul>
+<p>These are useful for <strong>security reports and documentation</strong>.</p>
+<hr />
+<h2 id="scan-multiple-targets">Scan Multiple Targets</h2>
+<p>Nikto can scan multiple targets using an input file.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nikto -h targets.txt
+</code></pre></div>
+<p>Example targets file:</p>
+<div class="highlight"><pre><span></span><code>http://example.com
+http://testsite.com
+</code></pre></div>
+<p>This allows scanning multiple websites automatically.</p>
+<hr />
+<h2 id="display-plugins">Display Plugins</h2>
+<p>To list available Nikto plugins:</p>
+<div class="highlight"><pre><span></span><code>nikto -list-plugins
+</code></pre></div>
+<p>Plugins allow Nikto to perform <strong>specialized security checks</strong>.</p>
+<hr />
+<h2 id="simple-workflow">Simple Workflow</h2>
+<p>Typical web vulnerability scanning workflow:</p>
+<h3 id="step-1-identify-target">Step 1 — Identify Target</h3>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>http://example.com
 </code></pre></div>
 <hr />
-<h2 id="logs">Logs</h2>
-<div class="highlight"><pre><span></span><code>docker logs &lt;container-id&gt;
+<h3 id="step-2-run-nikto-scan">Step 2 — Run Nikto Scan</h3>
+<div class="highlight"><pre><span></span><code>nikto -h http://example.com
 </code></pre></div>
 <hr />
-<h2 id="restart-container">Restart Container</h2>
-<div class="highlight"><pre><span></span><code>docker restart &lt;container-id&gt;
-</code></pre></div>
+<h3 id="step-3-review-results">Step 3 — Review Results</h3>
+<p>Look for:</p>
+<ul>
+<li>outdated software</li>
+<li>exposed directories</li>
+<li>insecure configurations</li>
+</ul>
 <hr />
-<h2 id="remove-all-containers">Remove All Containers</h2>
-<div class="highlight"><pre><span></span><code>docker rm $(docker ps -aq)
-</code></pre></div>
+<h3 id="step-4-investigate-vulnerabilities">Step 4 — Investigate Vulnerabilities</h3>
+<p>Manually verify findings to confirm security issues.</p>
 <hr />
-<h2 id="remove-all-images">Remove All Images</h2>
-<div class="highlight"><pre><span></span><code>docker rmi $(docker images -q)
-</code></pre></div>
+<h2 id="use-cases">Use Cases</h2>
+<p>Nikto is commonly used for:</p>
+<ul>
+<li>web server vulnerability scanning</li>
+<li>configuration auditing</li>
+<li>security assessments</li>
+<li>penetration testing</li>
+<li>bug bounty reconnaissance</li>
+<li>CTF challenges</li>
+</ul>
 <hr />
-<h2 id="simple-flow">Simple Flow</h2>
-<ol>
-<li>pull image</li>
-<li>run container</li>
-<li>make changes</li>
-<li>build image</li>
-<li>push to docker hub</li>
-</ol>
+<h2 id="best-practice">Best Practice</h2>
+<p>Nikto scans should only be performed in <strong>authorized environments</strong>.</p>
+<p>Safe practice platforms:</p>
+<ul>
+<li>TryHackMe</li>
+<li>Hack The Box</li>
+<li>PortSwigger Labs</li>
+<li>OWASP Juice Shop</li>
+<li>cybersecurity labs</li>
+</ul>
+<p>Never scan websites <strong>without permission</strong>.</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Nikto is a <strong>powerful web server vulnerability scanner</strong> used in cybersecurity testing.</p>
+<p>It allows security professionals to:</p>
+<ul>
+<li>detect web server vulnerabilities</li>
+<li>identify misconfigurations</li>
+<li>discover dangerous files</li>
+<li>analyze server security posture</li>
+</ul>
+<p>Learning Nikto is an important step for anyone studying <strong>web security and penetration testing</strong>.</p>
+<div style="background: #1f3327; border-radius: 8px; padding: 18px; margin: 20px 0; border-left: 5px solid #3ddc84; color: #e6e6e6;">
+<strong>✔ Learning Tip</strong><br><br>
+Use tools like Wireshark to observe network traffic. Seeing how data moves across a network builds strong intuition.
+</div>
 
 
 

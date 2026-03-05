@@ -12,13 +12,13 @@
         <meta name="author" content="TC Pioneer">
       
       
-        <link rel="canonical" href="https://learn.tcpioneer.org/docker/advanced/">
+        <link rel="canonical" href="https://learn.tcpioneer.org/networking/testing/">
       
       
-        <link rel="prev" href="../images-containers/">
+        <link rel="prev" href="../scanning/">
       
       
-        <link rel="next" href="../../tcpip/osi/">
+        <link rel="next" href="../../cryptography/basics/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Advanced & Concepts - TCP Handbook</title>
+        <title>Testing Network Services - TCP Handbook</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#advanced-concepts" class="md-skip">
+        <a href="#testing-network-services" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Advanced & Concepts
+              Testing Network Services
             
           </span>
         </div>
@@ -640,20 +640,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -674,7 +672,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -692,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../docker/intro/" class="md-nav__link">
         
   
   
@@ -720,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../docker/setup/" class="md-nav__link">
         
   
   
@@ -748,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
+      <a href="../../docker/commands/" class="md-nav__link">
         
   
   
@@ -776,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../images-containers/" class="md-nav__link">
+      <a href="../../docker/images-containers/" class="md-nav__link">
         
   
   
@@ -801,37 +799,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Advanced & Concepts
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../docker/advanced/" class="md-nav__link">
         
   
   
@@ -847,125 +818,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dockerfile
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Volumes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Networks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#port-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Port Mapping
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restart-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restart Container
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-all-containers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove All Containers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-all-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove All Images
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simple Flow
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1510,18 +1362,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1542,7 +1396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1560,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/discovery/" class="md-nav__link">
+      <a href="../discovery/" class="md-nav__link">
         
   
   
@@ -1588,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/mapping/" class="md-nav__link">
+      <a href="../mapping/" class="md-nav__link">
         
   
   
@@ -1616,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/scanning/" class="md-nav__link">
+      <a href="../scanning/" class="md-nav__link">
         
   
   
@@ -1641,10 +1495,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../networking/testing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1660,6 +1523,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1774,113 +1638,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dockerfile
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Volumes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Networks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#port-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Port Mapping
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restart-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restart Container
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-all-containers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove All Containers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-all-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove All Images
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simple Flow
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1896,58 +1653,71 @@
 
 
 
-<h1 id="advanced-concepts">Advanced Concepts</h1>
-<h2 id="dockerfile">Dockerfile</h2>
+<h1 id="testing-network-services">Testing Network Services</h1>
 <ul>
-<li>file used to build docker images</li>
+<li>It means checking how well the services are running on a network.</li>
+<li>Common ways to test include: Port Scanning, Banner Grabbing, Vulnerability Scanning, etc.</li>
+<li>Why test a network?</li>
+<li>Networks interact with many devices and software, which increases the risk of vulnerabilities</li>
+<li>Weak points can exist in: Servers, Firewalls and Routers, Modems and physical connection ports, Operating systems, Outdated software and patches.</li>
+<li>Cyber attacks can exploit these vulnerabilities to access and harm business systems.</li>
+<li>Testing network security can:<ul>
+<li>Protect the sensitive data of employees and customers.</li>
+<li>Prevents disruption to business operations.</li>
+<li>Maintains the organization’s reputation and customer trust.</li>
+<li>Reduces risks of financial loss and legal issues.</li>
 </ul>
-<p>example:</p>
-<p>FROM ubuntu<br />
-RUN apt update<br />
-CMD ["echo", "hello"]</p>
-<hr />
-<h2 id="volumes">Volumes</h2>
-<ul>
-<li>used to store data permanently</li>
-<li>data is not lost when container stops</li>
+</li>
+<li>Purpose of Network testing:</li>
+<li>It is to simulate how an attacker can gain access to the network.</li>
+<li>It aims to reveal any potential vulnerabilities that can be used as an entry point.</li>
+<li>It will make the security stronger in specific areas and implement targeted measures.</li>
+<li>Process of network test:</li>
+<li>Planning:<ul>
+<li>Discuss on what methods can be used in the test and how the results will be measured.</li>
+<li>The aspect depends on the scope and goals of the test.</li>
+<li>Ethical hackers will also identify the critical areas of the network that could contain vulnerabilities.</li>
 </ul>
-<hr />
-<h2 id="networks">Networks</h2>
-<ul>
-<li>used for communication between containers</li>
+</li>
+<li>Probing:<ul>
+<li>The ethical hackers then start using testing solutions to examine how the network responds to cyberattacks.</li>
+<li>It allows them to understand how various parts of the network communicate with different types of responses.</li>
+<li>As a result, an ethical hacker knows how to operate in a way that an attacker can use to bypass any automated defences.</li>
 </ul>
-<hr />
-<h2 id="port-mapping">Port Mapping</h2>
-<ul>
-<li>connect container port to host</li>
+</li>
+<li>Mock attacks:<ul>
+<li>With proper network research, an ethical hacker will simulate a range of attacks.</li>
+<li>It can include any of the types of network threats already discussed.</li>
+<li>If the vulnerability is found, they will take actions to exploit the weakness, such as attempting to disrupt the traffic, increase privilege and steal data.</li>
+<li>Tester can then measure the vulnerability by how much theoretical damage it would be able to inflict.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>docker run -p 8080:80 &lt;image-name&gt;
-</code></pre></div>
-<hr />
-<h2 id="logs">Logs</h2>
-<div class="highlight"><pre><span></span><code>docker logs &lt;container-id&gt;
-</code></pre></div>
-<hr />
-<h2 id="restart-container">Restart Container</h2>
-<div class="highlight"><pre><span></span><code>docker restart &lt;container-id&gt;
-</code></pre></div>
-<hr />
-<h2 id="remove-all-containers">Remove All Containers</h2>
-<div class="highlight"><pre><span></span><code>docker rm $(docker ps -aq)
-</code></pre></div>
-<hr />
-<h2 id="remove-all-images">Remove All Images</h2>
-<div class="highlight"><pre><span></span><code>docker rmi $(docker images -q)
-</code></pre></div>
-<hr />
-<h2 id="simple-flow">Simple Flow</h2>
-<ol>
-<li>pull image</li>
-<li>run container</li>
-<li>make changes</li>
-<li>build image</li>
-<li>push to docker hub</li>
-</ol>
+</li>
+<li>Analyzing the results:<ul>
+<li>The test ends after the tester is confident that there is any more information that can be exploited about the network’s security.</li>
+<li>Testing reports contain the details of the vulnerability found, details of recommended remedial action and the timeframe for solving any network problems.</li>
+</ul>
+</li>
+<li>Different types of network testing:</li>
+<li>White box testing:<ul>
+<li>Testers have the intimate knowledge of the network and it has been made.</li>
+</ul>
+</li>
+<li>Black box testing:<ul>
+<li>The tester does not have prior knowledge of the organisation’s network or system.</li>
+<li>This method is the most effective at simulating the effects of an actual cyber attack.</li>
+</ul>
+</li>
+<li>Grey box testing:<ul>
+<li>it is the combination of both white and black box testing.</li>
+<li>The ethical hacker is given a select amount of information about the network.</li>
+<li>They are better for assessing the risk that privileged users pose to the business.</li>
+</ul>
+</li>
+</ul>
+<div style="background: #1f3327; border-radius: 8px; padding: 18px; margin: 20px 0; border-left: 5px solid #3ddc84; color: #e6e6e6;">
+<strong>✔ Learning Tip</strong><br><br>
+Use tools like Wireshark to observe network traffic. Seeing how data moves across a network builds strong intuition.
+</div>
 
 
 

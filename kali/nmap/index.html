@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://learn.tcpioneer.org/kali/nmap/">
       
       
-        <link rel="prev" href="../../docker/advanced/">
+        <link rel="prev" href="../../tcpip/router-switch-hub/">
       
       
-        <link rel="next" href="../wireshark/">
+        <link rel="next" href="../nikto/">
       
       
         
@@ -834,6 +834,144 @@
       
   
   
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-brands fa-internet-explorer'></i> TCP/IP & OSI 
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-brands fa-internet-explorer'></i> TCP/IP & OSI 
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tcpip/osi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OSI Layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tcpip/ipv4-ipv6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IPv4 and IPv6 addresses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tcpip/router-switch-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Router, Switch and Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -847,10 +985,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -868,8 +1006,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -950,6 +1088,17 @@
     <span class="md-ellipsis">
       
         What is Nmap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Nmap
       
     </span>
   </a>
@@ -1111,10 +1260,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#timing" class="md-nav__link">
+  <a href="#timing-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Timing
+        Timing Options
       
     </span>
   </a>
@@ -1122,10 +1271,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verbose" class="md-nav__link">
+  <a href="#verbose-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verbose
+        Verbose Mode
       
     </span>
   </a>
@@ -1144,10 +1293,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
+  <a href="#simple-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Use Case
+        Simple Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-discover-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Discover Target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-identify-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Identify Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-perform-detailed-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Perform Detailed Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-investigate-open-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Investigate Open Ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
       
     </span>
   </a>
@@ -1155,10 +1365,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
+  <a href="#best-practice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simple Flow
+        Best Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
       
     </span>
   </a>
@@ -1169,6 +1390,174 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nikto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nikto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hydra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hydra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqlmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQLmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hashcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hashcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gobuster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobuster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1265,14 +1654,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../hydra/" class="md-nav__link">
+      <a href="../aircrack-ng/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hydra
+    Aircrack-ng
   
 
     
@@ -1293,14 +1682,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../netcat/" class="md-nav__link">
+      <a href="../john-the-ripper/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Netcat
+    John the Ripper
   
 
     
@@ -1336,10 +1725,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1357,8 +1746,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1375,14 +1764,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/intro/" class="md-nav__link">
+      <a href="../../networking/discovery/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introduction
+    Network Discovery Protocols
   
 
     
@@ -1403,14 +1792,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/ip/" class="md-nav__link">
+      <a href="../../networking/mapping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    IP Addressing
+    Network Architectures, Mapping and Target Identification
   
 
     
@@ -1431,14 +1820,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/protocols/" class="md-nav__link">
+      <a href="../../networking/scanning/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Protocols
+    Network Scanning and Fingerprinting
   
 
     
@@ -1459,14 +1848,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/ports/" class="md-nav__link">
+      <a href="../../networking/testing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ports
+    Testing Network Services
   
 
     
@@ -1480,6 +1869,60 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-shield-alt'></i> Cryptography
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-shield-alt'></i> Cryptography
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -1487,14 +1930,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/commands/" class="md-nav__link">
+      <a href="../../cryptography/basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Commands
+    Cryptography Basics
   
 
     
@@ -1546,6 +1989,17 @@
     <span class="md-ellipsis">
       
         What is Nmap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Nmap
       
     </span>
   </a>
@@ -1707,10 +2161,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#timing" class="md-nav__link">
+  <a href="#timing-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Timing
+        Timing Options
       
     </span>
   </a>
@@ -1718,10 +2172,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verbose" class="md-nav__link">
+  <a href="#verbose-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verbose
+        Verbose Mode
       
     </span>
   </a>
@@ -1740,10 +2194,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
+  <a href="#simple-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Use Case
+        Simple Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-discover-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Discover Target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-identify-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Identify Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-perform-detailed-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Perform Detailed Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-investigate-open-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Investigate Open Ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
       
     </span>
   </a>
@@ -1751,10 +2266,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
+  <a href="#best-practice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simple Flow
+        Best Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
       
     </span>
   </a>
@@ -1781,92 +2307,316 @@
 <h1 id="nmap">Nmap</h1>
 <h2 id="what-is-nmap">What is Nmap</h2>
 <ul>
-<li>Nmap is a network scanning tool  </li>
-<li>used to discover hosts and services  </li>
-<li>widely used in cybersecurity and CTF  </li>
+<li><strong>Nmap (Network Mapper)</strong> is one of the most powerful <strong>network scanning and reconnaissance tools</strong>.</li>
+<li>It is used to <strong>discover hosts, identify open ports, detect running services, and analyze network security</strong>.</li>
+<li>Nmap is widely used by:</li>
+<li>penetration testers</li>
+<li>cybersecurity professionals</li>
+<li>system administrators</li>
+<li>ethical hackers</li>
+<li>CTF players</li>
 </ul>
+<p>Nmap helps security professionals understand:</p>
+<ul>
+<li>which systems are active</li>
+<li>what services are running</li>
+<li>which ports are open</li>
+<li>what operating systems are being used</li>
+</ul>
+<p>Because of its flexibility and powerful scanning engine, Nmap is considered a <strong>core tool in cybersecurity reconnaissance</strong>.</p>
+<hr />
+<h2 id="install-nmap">Install Nmap</h2>
+<p>Nmap is usually pre-installed in <strong>Kali Linux</strong>.</p>
+<p>To check installation:</p>
+<div class="highlight"><pre><span></span><code>nmap --version
+</code></pre></div>
+<p>If it is not installed:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install nmap
+</code></pre></div>
 <hr />
 <h2 id="basic-scan">Basic Scan</h2>
+<p>The most basic Nmap scan:</p>
 <div class="highlight"><pre><span></span><code>nmap &lt;target&gt;
 </code></pre></div>
-<hr />
-<h2 id="scan-with-service-detection">Scan with Service Detection</h2>
-<div class="highlight"><pre><span></span><code>nmap -sV &lt;target&gt;
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap 192.168.1.10
 </code></pre></div>
-<hr />
-<h2 id="scan-all-ports">Scan All Ports</h2>
-<div class="highlight"><pre><span></span><code>nmap -p- &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="os-detection">OS Detection</h2>
-<div class="highlight"><pre><span></span><code>nmap -O &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="aggressive-scan">Aggressive Scan</h2>
-<div class="highlight"><pre><span></span><code>nmap -A &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="fast-scan">Fast Scan</h2>
-<div class="highlight"><pre><span></span><code>nmap -F &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="scan-specific-ports">Scan Specific Ports</h2>
-<div class="highlight"><pre><span></span><code>nmap -p 80,443 &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="scan-a-range-of-ips">Scan a Range of IPs</h2>
-<div class="highlight"><pre><span></span><code>nmap 192.168.1.1-100
-</code></pre></div>
-<hr />
-<h2 id="scan-a-subnet">Scan a Subnet</h2>
-<div class="highlight"><pre><span></span><code>nmap 192.168.1.0/24
-</code></pre></div>
-<hr />
-<h2 id="disable-ping">Disable Ping</h2>
-<div class="highlight"><pre><span></span><code>nmap -Pn &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="syn-scan">SYN Scan</h2>
-<div class="highlight"><pre><span></span><code>sudo nmap -sS &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="udp-scan">UDP Scan</h2>
-<div class="highlight"><pre><span></span><code>sudo nmap -sU &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="save-output">Save Output</h2>
-<div class="highlight"><pre><span></span><code>nmap -oN result.txt &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="xml-output">XML Output</h2>
-<div class="highlight"><pre><span></span><code>nmap -oX result.xml &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="timing">Timing</h2>
-<div class="highlight"><pre><span></span><code>nmap -T4 &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="verbose">Verbose</h2>
-<div class="highlight"><pre><span></span><code>nmap -v &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="combine-options">Combine Options</h2>
-<div class="highlight"><pre><span></span><code>nmap -A -T4 -p- &lt;target&gt;
-</code></pre></div>
-<hr />
-<h2 id="use-case">Use Case</h2>
+<p>This scan will:</p>
 <ul>
-<li>find open ports  </li>
-<li>identify services  </li>
-<li>reconnaissance  </li>
+<li>discover open ports</li>
+<li>detect running services</li>
+<li>identify accessible network ports</li>
 </ul>
 <hr />
-<h2 id="simple-flow">Simple Flow</h2>
-<ol>
-<li>scan target  </li>
-<li>find ports  </li>
-<li>identify services  </li>
-</ol>
+<h2 id="scan-with-service-detection">Scan with Service Detection</h2>
+<p>To identify <strong>services and versions running on open ports</strong>:</p>
+<div class="highlight"><pre><span></span><code>nmap -sV &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -sV 192.168.1.10
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>22/tcp open  ssh     OpenSSH 7.9
+80/tcp open  http    Apache 2.4.41
+</code></pre></div>
+<p>This information helps identify <strong>potential vulnerabilities</strong>.</p>
+<hr />
+<h2 id="scan-all-ports">Scan All Ports</h2>
+<p>By default Nmap scans <strong>1000 common ports</strong>.</p>
+<p>To scan all <strong>65535 ports</strong>:</p>
+<div class="highlight"><pre><span></span><code>nmap -p- &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -p- 192.168.1.10
+</code></pre></div>
+<p>This is useful when services run on <strong>unusual ports</strong>.</p>
+<hr />
+<h2 id="os-detection">OS Detection</h2>
+<p>Nmap can attempt to <strong>identify the operating system</strong> of a target machine.</p>
+<div class="highlight"><pre><span></span><code>nmap -O &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>sudo nmap -O 192.168.1.10
+</code></pre></div>
+<p>Possible output:</p>
+<div class="highlight"><pre><span></span><code>OS: Linux 5.x
+</code></pre></div>
+<p>This works by analyzing <strong>TCP/IP fingerprinting patterns</strong>.</p>
+<hr />
+<h2 id="aggressive-scan">Aggressive Scan</h2>
+<p>Aggressive scan enables multiple features:</p>
+<ul>
+<li>OS detection</li>
+<li>version detection</li>
+<li>script scanning</li>
+<li>traceroute</li>
+</ul>
+<p>Command:</p>
+<div class="highlight"><pre><span></span><code>nmap -A &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -A 192.168.1.10
+</code></pre></div>
+<p>This provides <strong>detailed reconnaissance results</strong>.</p>
+<hr />
+<h2 id="fast-scan">Fast Scan</h2>
+<p>A fast scan checks fewer ports for quicker results.</p>
+<div class="highlight"><pre><span></span><code>nmap -F &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -F 192.168.1.10
+</code></pre></div>
+<p>Useful when performing <strong>quick reconnaissance</strong>.</p>
+<hr />
+<h2 id="scan-specific-ports">Scan Specific Ports</h2>
+<p>You can scan specific ports using:</p>
+<div class="highlight"><pre><span></span><code>nmap -p &lt;port&gt; &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -p 80,443 192.168.1.10
+</code></pre></div>
+<p>This checks only the selected ports.</p>
+<hr />
+<h2 id="scan-a-range-of-ips">Scan a Range of IPs</h2>
+<p>Scan multiple IP addresses in a range:</p>
+<div class="highlight"><pre><span></span><code>nmap 192.168.1.1-100
+</code></pre></div>
+<p>This scans:</p>
+<div class="highlight"><pre><span></span><code>192.168.1.1 → 192.168.1.100
+</code></pre></div>
+<p>Useful for scanning <strong>small networks</strong>.</p>
+<hr />
+<h2 id="scan-a-subnet">Scan a Subnet</h2>
+<p>Scan an entire subnet:</p>
+<div class="highlight"><pre><span></span><code>nmap 192.168.1.0/24
+</code></pre></div>
+<p>This scans <strong>256 possible IP addresses</strong>.</p>
+<p>Common for <strong>internal network reconnaissance</strong>.</p>
+<hr />
+<h2 id="disable-ping">Disable Ping</h2>
+<p>Some hosts block ping requests.</p>
+<p>To scan without host discovery:</p>
+<div class="highlight"><pre><span></span><code>nmap -Pn &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -Pn 192.168.1.10
+</code></pre></div>
+<p>This forces Nmap to <strong>scan the target even if ping fails</strong>.</p>
+<hr />
+<h2 id="syn-scan">SYN Scan</h2>
+<p>SYN scan is one of the <strong>most common stealth scanning techniques</strong>.</p>
+<div class="highlight"><pre><span></span><code>sudo nmap -sS &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>sudo nmap -sS 192.168.1.10
+</code></pre></div>
+<p>Advantages:</p>
+<ul>
+<li>faster scanning</li>
+<li>stealthier detection</li>
+<li>commonly used in penetration testing</li>
+</ul>
+<hr />
+<h2 id="udp-scan">UDP Scan</h2>
+<p>UDP services can also be scanned.</p>
+<div class="highlight"><pre><span></span><code>sudo nmap -sU &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>sudo nmap -sU 192.168.1.10
+</code></pre></div>
+<p>UDP services include:</p>
+<ul>
+<li>DNS</li>
+<li>SNMP</li>
+<li>DHCP</li>
+</ul>
+<hr />
+<h2 id="save-output">Save Output</h2>
+<p>Save results to a file:</p>
+<div class="highlight"><pre><span></span><code>nmap -oN result.txt &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -oN scan_result.txt 192.168.1.10
+</code></pre></div>
+<p>This is useful for <strong>reporting and documentation</strong>.</p>
+<hr />
+<h2 id="xml-output">XML Output</h2>
+<p>XML output is useful for automation tools.</p>
+<div class="highlight"><pre><span></span><code>nmap -oX result.xml &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -oX scan.xml 192.168.1.10
+</code></pre></div>
+<p>Many security tools can <strong>import Nmap XML results</strong>.</p>
+<hr />
+<h2 id="timing-options">Timing Options</h2>
+<p>Nmap allows adjusting scan speed.</p>
+<div class="highlight"><pre><span></span><code>nmap -T4 &lt;target&gt;
+</code></pre></div>
+<p>Timing levels:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Speed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T0</td>
+<td>very slow</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>slow</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>polite</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>normal</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>fast</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>very aggressive</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -T4 192.168.1.10
+</code></pre></div>
+<hr />
+<h2 id="verbose-mode">Verbose Mode</h2>
+<p>To display more scanning information:</p>
+<div class="highlight"><pre><span></span><code>nmap -v &lt;target&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -v 192.168.1.10
+</code></pre></div>
+<p>Verbose mode shows <strong>real-time scanning progress</strong>.</p>
+<hr />
+<h2 id="combine-options">Combine Options</h2>
+<p>Nmap commands can combine multiple options.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -A -T4 -p- &lt;target&gt;
+</code></pre></div>
+<p>This command performs:</p>
+<ul>
+<li>aggressive scan</li>
+<li>fast timing</li>
+<li>all port scan</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>nmap -A -T4 -p- 192.168.1.10
+</code></pre></div>
+<hr />
+<h2 id="simple-workflow">Simple Workflow</h2>
+<p>Typical reconnaissance workflow using Nmap:</p>
+<h3 id="step-1-discover-target">Step 1 — Discover Target</h3>
+<div class="highlight"><pre><span></span><code>nmap 192.168.1.10
+</code></pre></div>
+<hr />
+<h3 id="step-2-identify-services">Step 2 — Identify Services</h3>
+<div class="highlight"><pre><span></span><code>nmap -sV 192.168.1.10
+</code></pre></div>
+<hr />
+<h3 id="step-3-perform-detailed-scan">Step 3 — Perform Detailed Scan</h3>
+<div class="highlight"><pre><span></span><code>nmap -A 192.168.1.10
+</code></pre></div>
+<hr />
+<h3 id="step-4-investigate-open-ports">Step 4 — Investigate Open Ports</h3>
+<p>Focus on services like:</p>
+<ul>
+<li>SSH</li>
+<li>FTP</li>
+<li>HTTP</li>
+<li>SMB</li>
+</ul>
+<hr />
+<h2 id="use-cases">Use Cases</h2>
+<p>Nmap is commonly used for:</p>
+<ul>
+<li>network discovery</li>
+<li>vulnerability reconnaissance</li>
+<li>service identification</li>
+<li>penetration testing</li>
+<li>security auditing</li>
+<li>CTF challenges</li>
+</ul>
+<hr />
+<h2 id="best-practice">Best Practice</h2>
+<p>Nmap should only be used in <strong>authorized environments</strong>.</p>
+<p>Safe practice platforms:</p>
+<ul>
+<li>TryHackMe</li>
+<li>Hack The Box</li>
+<li>PortSwigger Labs</li>
+<li>OWASP Juice Shop</li>
+<li>CTF competitions</li>
+</ul>
+<p>Never scan systems <strong>without permission</strong>.</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Nmap is one of the <strong>most essential tools in cybersecurity reconnaissance</strong>.</p>
+<p>It allows security professionals to:</p>
+<ul>
+<li>discover hosts</li>
+<li>identify open ports</li>
+<li>detect services</li>
+<li>analyze operating systems</li>
+<li>perform network mapping</li>
+</ul>
+<p>Mastering Nmap is a fundamental step for anyone pursuing <strong>ethical hacking and cybersecurity</strong>.</p>
+<div style="background: #1f3327; border-radius: 8px; padding: 18px; margin: 20px 0; border-left: 5px solid #3ddc84; color: #e6e6e6;">
+<strong>✔ Learning Tip</strong><br><br>
+Use multiple learning resources such as documentation, videos, labs, and challenges to reinforce understanding.
+</div>
 
 
 
