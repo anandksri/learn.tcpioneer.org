@@ -83,10 +83,18 @@ nav:
       - John the Ripper: kali/john-the-ripper.md
 
   - "<i class='fa-solid fa-globe'></i> Networking":
+      - Network Communication Protocols: networking/protocols.md
+      - Network Management Protocols: networking/management.md
+      - Network Security Protocols: networking/security.md
+      - Other Related Protocols: networking/other.md
       - Network Discovery Protocols: networking/discovery.md
       - Network Architectures, Mapping and Target Identification: networking/mapping.md
       - Network Scanning and Fingerprinting: networking/scanning.md
       - Testing Network Services: networking/testing.md
 
+
   - "<i class='fa-solid fa-shield-alt'></i> Cryptography":
       - Cryptography Basics: cryptography/basics.md
+
+  - "<i class='fa-solid fa-list-check'></i> Assessment":
+      - Information Gathering: assessment/information-gathering.md
