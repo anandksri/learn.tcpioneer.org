@@ -12,13 +12,13 @@
         <meta name="author" content="TC Pioneer">
       
       
-        <link rel="canonical" href="https://learn.tcpioneer.org/github/advanced/">
+        <link rel="canonical" href="https://learn.tcpioneer.org/networking/security/">
       
       
-        <link rel="prev" href="../branching/">
+        <link rel="prev" href="../management/">
       
       
-        <link rel="next" href="../../docker/intro/">
+        <link rel="next" href="../other/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Advanced & Concepts - TCP Handbook</title>
+        <title>Network Security Protocols - TCP Handbook</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#advanced-concepts" class="md-skip">
+        <a href="#network-security-protocols" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Advanced & Concepts
+              Network Security Protocols
             
           </span>
         </div>
@@ -446,20 +446,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -480,7 +478,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -498,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../github/intro/" class="md-nav__link">
         
   
   
@@ -526,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../github/setup/" class="md-nav__link">
         
   
   
@@ -554,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
+      <a href="../../github/commands/" class="md-nav__link">
         
   
   
@@ -582,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../branching/" class="md-nav__link">
+      <a href="../../github/branching/" class="md-nav__link">
         
   
   
@@ -607,37 +605,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Advanced & Concepts
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../github/advanced/" class="md-nav__link">
         
   
   
@@ -653,164 +624,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#init-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Init Command
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#undoing-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Undoing Changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fork" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fork
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extra-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extra Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extra Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gitignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        .gitignore
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#staging-area" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Staging Area
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#head" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HEAD
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#origin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Origin
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#main-vs-master" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Main vs Master
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simple Flow
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1549,18 +1362,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1581,7 +1396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1599,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/protocols/" class="md-nav__link">
+      <a href="../protocols/" class="md-nav__link">
         
   
   
@@ -1627,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/management/" class="md-nav__link">
+      <a href="../management/" class="md-nav__link">
         
   
   
@@ -1652,10 +1467,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../networking/security/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Security Protocols
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1671,6 +1513,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-secure-socket-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL (Secure Socket Layer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https-hypertext-transfer-protocol-secure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS (Hypertext Transfer Protocol Secure)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tls-transport-layer-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TLS (Transport Layer Security)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1683,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/other/" class="md-nav__link">
+      <a href="../other/" class="md-nav__link">
         
   
   
@@ -1711,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/discovery/" class="md-nav__link">
+      <a href="../discovery/" class="md-nav__link">
         
   
   
@@ -1739,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/mapping/" class="md-nav__link">
+      <a href="../mapping/" class="md-nav__link">
         
   
   
@@ -1767,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/scanning/" class="md-nav__link">
+      <a href="../scanning/" class="md-nav__link">
         
   
   
@@ -1795,7 +1690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking/testing/" class="md-nav__link">
+      <a href="../testing/" class="md-nav__link">
         
   
   
@@ -2014,10 +1909,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#init-command" class="md-nav__link">
+  <a href="#ssl-secure-socket-layer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Init Command
+        SSL (Secure Socket Layer)
       
     </span>
   </a>
@@ -2025,10 +1920,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
+  <a href="#https-hypertext-transfer-protocol-secure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workflow
+        HTTPS (Hypertext Transfer Protocol Secure)
       
     </span>
   </a>
@@ -2036,115 +1931,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#undoing-changes" class="md-nav__link">
+  <a href="#tls-transport-layer-security" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Undoing Changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fork" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fork
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extra-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extra Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extra Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gitignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        .gitignore
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#staging-area" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Staging Area
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#head" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HEAD
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#origin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Origin
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#main-vs-master" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Main vs Master
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simple Flow
+        TLS (Transport Layer Security)
       
     </span>
   </a>
@@ -2168,65 +1958,36 @@
 
 
 
-<h1 id="advanced-concepts">Advanced Concepts</h1>
-<h2 id="init-command">Init Command</h2>
-<p>init → used to create a new git repo</p>
-<div class="highlight"><pre><span></span><code>git init
-git remote add origin &lt;link&gt;
-git remote -v
-git branch
-git branch -M main
-git push origin main
-</code></pre></div>
-<hr />
-<h2 id="workflow">Workflow</h2>
-<p>working directory → staging area → local repo → remote repo</p>
-<hr />
-<h2 id="undoing-changes">Undoing Changes</h2>
-<p>case 1: staged changes</p>
-<div class="highlight"><pre><span></span><code>git reset &lt;file name&gt;
-git reset
-</code></pre></div>
-<p>case 2: committed changes (one commit)</p>
-<div class="highlight"><pre><span></span><code>git reset HEAD~1
-</code></pre></div>
-<p>case 3: committed changes (many commits)</p>
-<div class="highlight"><pre><span></span><code>git reset &lt;commit hash&gt;
-git reset --hard &lt;commit hash&gt;
-</code></pre></div>
-<hr />
-<h2 id="logs">Logs</h2>
-<p>git log<br />
-log = history</p>
-<hr />
-<h2 id="fork">Fork</h2>
-<p>A fork is a new repo that shares code with the original repo</p>
-<p>Fork is a rough copy</p>
-<hr />
-<h2 id="extra-concepts">Extra Concepts</h2>
-<h3 id="gitignore">.gitignore</h3>
-<p>used to ignore files (node_modules, .env)</p>
-<hr />
-<h3 id="staging-area">Staging Area</h3>
-<p>middle step between working directory and commit</p>
-<hr />
-<h3 id="head">HEAD</h3>
-<p>pointer to current commit</p>
-<hr />
-<h3 id="origin">Origin</h3>
-<p>default name of remote repo</p>
-<hr />
-<h3 id="main-vs-master">Main vs Master</h3>
-<p>main → new default<br />
-master → old naming</p>
-<hr />
-<h2 id="simple-flow">Simple Flow</h2>
-<ol>
-<li>create file</li>
-<li>git add</li>
-<li>git commit</li>
-<li>git push</li>
-</ol>
+<h1 id="network-security-protocols">Network Security Protocols</h1>
+<p>Protects data during transmission and prevent unauthorized access. They mainly use encryption, authentication and integrity checks to secure communication across networks.</p>
+<h3 id="ssl-secure-socket-layer">SSL (Secure Socket Layer)</h3>
+<ul>
+<li>Security protocol used to encrypt communication over the Internet.</li>
+<li>Protects sensitive data from interception and unauthorized access.</li>
+<li>Supports both client–server and server–server communication.</li>
+<li>Forms the basis of secure web communication.</li>
+<li>No fixed port (commonly used with <strong>443</strong> via HTTPS).</li>
+</ul>
+<h3 id="https-hypertext-transfer-protocol-secure">HTTPS (Hypertext Transfer Protocol Secure)</h3>
+<ul>
+<li>Secure version of HTTP used for encrypted web communication.</li>
+<li>Uses <strong>SSL/TLS</strong> to encrypt data between browser and server.</li>
+<li>Protects data from interception and tampering.</li>
+<li>Identified by the <strong>padlock icon in browsers</strong>.</li>
+<li>Port: 443 (TCP)</li>
+</ul>
+<h3 id="tls-transport-layer-security">TLS (Transport Layer Security)</h3>
+<ul>
+<li>Security protocol providing <strong>encryption, authentication, and data integrity</strong>.</li>
+<li>Successor and improved version of SSL.</li>
+<li>Widely used in web applications, email, and VoIP.</li>
+<li>Ensures secure communication over networks.</li>
+<li><strong>Port:</strong> No fixed port (commonly used with <strong>443, 993, 995</strong>).</li>
+</ul>
+<div style="background: #1f3327; border-radius: 8px; padding: 18px; margin: 20px 0; border-left: 5px solid #3ddc84; color: #e6e6e6;">
+<strong>✔ Learning Tip</strong><br><br>
+Break complex topics into smaller parts. Learn one concept at a time instead of trying to master everything at once.
+</div>
 
 
 
