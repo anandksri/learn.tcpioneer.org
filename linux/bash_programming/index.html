@@ -12,13 +12,13 @@
         <meta name="author" content="TC Pioneer">
       
       
-        <link rel="canonical" href="https://learn.tcpioneer.org/linux/intro/">
+        <link rel="canonical" href="https://learn.tcpioneer.org/linux/bash_programming/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../cluster-adv/">
       
       
-        <link rel="next" href="../setup/">
+        <link rel="next" href="../text_commands/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Introduction - TCP Handbook</title>
+        <title>Bash Programming - TCP Handbook</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux" class="md-skip">
+        <a href="#bash-shell-programming" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Bash Programming
             
           </span>
         </div>
@@ -301,26 +301,28 @@
                 
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
     
   
-    Introduction
+    <i class='fa-solid fa-terminal'></i> Basics
   
 
     
@@ -328,104 +330,19 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
   
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
+    <i class='fa-solid fa-terminal'></i> Basics
   
 
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linux-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linux Distributions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-linux-is-used" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where Linux is Used
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kernel
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -434,14 +351,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../command_line_prompt/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup & Access
+    Command Line Prompt
   
 
     
@@ -462,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
+      <a href="../basic_commands/" class="md-nav__link">
         
   
   
@@ -490,14 +407,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../filesystem/" class="md-nav__link">
+      <a href="../working_with_files/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    File System & Permissions
+    Working with Files
   
 
     
@@ -518,14 +435,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/" class="md-nav__link">
+      <a href="../file-system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Advanced & Concepts
+    File System
   
 
     
@@ -534,6 +451,1093 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file_permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Backup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swap_memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swap Memory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_manager_cont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager (Advanced)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-namespaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Namespaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba_server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared_storage_iscsi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared Storage (iSCSI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash Programming
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bash-shell-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bash shell programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bash shell programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command substitution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-if-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The if statement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -571,7 +1575,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-brands fa-github'></i>Git & GitHub
+    <i class='fa-brands fa-github'></i> Git & GitHub
   
 
     
@@ -587,7 +1591,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-brands fa-github'></i>Git & GitHub
+    <i class='fa-brands fa-github'></i> Git & GitHub
   
 
           </label>
@@ -1097,7 +2101,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
   
 
     
@@ -1113,7 +2117,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
   
 
           </label>
@@ -1847,7 +2851,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-solid fa-list-check'></i> Assessment
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
   
 
     
@@ -1863,7 +2867,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-solid fa-list-check'></i> Assessment
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
   
 
           </label>
@@ -1904,6 +2908,116 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/role-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Role-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/attribute-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attribute-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1921,8 +3035,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1931,57 +3043,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-linux" class="md-nav__link">
+  <a href="#bash-shell-programming" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is Linux
+        Bash shell programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bash shell programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic syntax
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#why-linux" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Linux
+        Functions
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#linux-distributions" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#command-substitution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linux Distributions
+        Command substitution
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#where-linux-is-used" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#the-if-statement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Where Linux is Used
+        The if statement
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kernel
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2002,44 +3120,269 @@
 
 
 
-<h1 id="linux">Linux</h1>
-<h2 id="what-is-linux">What is Linux</h2>
-<ul>
-<li>Linux is an open-source operating system  </li>
-<li>used to manage hardware and software  </li>
-<li>widely used in servers, cybersecurity, and development  </li>
-</ul>
-<hr />
-<h2 id="why-linux">Why Linux</h2>
-<ul>
-<li>free and open-source  </li>
-<li>secure  </li>
-<li>stable  </li>
-<li>highly customizable  </li>
-<li>widely used in hacking and cybersecurity  </li>
-</ul>
-<hr />
-<h2 id="linux-distributions">Linux Distributions</h2>
-<ul>
-<li>Ubuntu  </li>
-<li>Kali Linux  </li>
-<li>Debian  </li>
-<li>Fedora  </li>
-</ul>
-<hr />
-<h2 id="where-linux-is-used">Where Linux is Used</h2>
-<ul>
-<li>servers  </li>
-<li>cloud systems  </li>
-<li>cybersecurity  </li>
-<li>embedded systems  </li>
-</ul>
-<hr />
-<h2 id="kernel">Kernel</h2>
-<ul>
-<li>core part of the operating system  </li>
-<li>manages hardware and system resources  </li>
-</ul>
+  <h1>Bash Programming</h1>
+
+<h2 id="bash-shell-programming">Bash shell programming</h2>
+<p>The <strong>shell</strong> is a command line interpreter which provides the user interface for terminal windows. It can also be used to run scripts, even in non-interactive sessions without a terminal window, as if the commands were being directly typed in.
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+find /usr/lib -name &quot;*.c&quot; -ls
+</code></pre></div></p>
+<p>The first line of the script, that starts with <code>#!/bin/bash</code> contains the full path of the command interpreter that is to be used on the file. The command interpreter is tasked with executing statements that follow it in the script. Commonly used interpreters include:
+<div class="highlight"><pre><span></span><code>/usr/bin/perl
+/bin/bash
+/bin/csh
+/bin/tcsh
+/bin/ksh
+/usr/bin/python
+/bin/sh
+</code></pre></div></p>
+<p>Scripting is not only limited to shell interpreter. It can be used for Python scripts too.
+<div class="highlight"><pre><span></span><code># ll script
+-rwxr--r--. 1 root root 55 Mar  3 15:22 script
+# cat script
+#!/usr/bin/python
+print &quot;Welcome to the Python script&quot;
+# ./script
+Welcome to the Python script
+</code></pre></div></p>
+<p>Scripts can be interactive too.</p>
+<div class="highlight"><pre><span></span><code># cat script.sh
+#!/bin/bash
+   # Interactive reading of variables
+   echo &quot;ENTER YOUR NAME&quot;
+   read sname
+   # Display of variable values
+   echo &quot;WELCOME &quot;$sname&quot;!&quot;
+# ./script.sh
+ENTER YOUR NAME
+Adriano
+WELCOME Adriano!
+</code></pre></div>
+<p>All shell scripts generate a return value upon finishing execution. The value can be set with the <code>exit</code> statement. Return values permit a process to monitor the exit state of another process often in a parent-child relationship. This helps to determine how this process terminated and take any appropriate steps necessary, contingent on success or failure. By convention, success is returned as 0, and failure is returned as a non-zero value. The return value is always stored in the <code>$?</code> environment variable.
+<div class="highlight"><pre><span></span><code># cat names.txt
+01 Mario Rossi
+02 Antonio Esposito
+03 Michele Laforca
+04 Antonio Esposito
+# echo $?
+0
+# cat names
+cat: names: No such file or directory
+# echo $?
+1
+</code></pre></div></p>
+<h3 id="basic-syntax">Basic syntax</h3>
+<p>Scripts require you to follow a standard language syntax. Rules delineate how to define variables and how to construct and format allowed statements, etc. The table lists some special character usages within bash scripts:</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#</td>
+<td>Used to add a comment, except when used as #, or as #! when starting a script</td>
+</tr>
+<tr>
+<td>\</td>
+<td>Used at the end of a line to indicate continuation on to the next line</td>
+</tr>
+<tr>
+<td>;</td>
+<td>Used to interpret what follows as a new command</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Indicates what follows is a variable</td>
+</tr>
+</tbody>
+</table>
+<p>Sometimes you may want to group multiple commands on a single line. The semicolon character is used to separate these commands and execute them sequentially as if they had been typed on separate lines.</p>
+<p>The three commands in the following example will all execute even if the ones preceding them fail:
+<div class="highlight"><pre><span></span><code>$ make ; make install ; make clean
+</code></pre></div>
+However, you may want to abort subsequent commands if one fails. You can do this using the and operator:
+<div class="highlight"><pre><span></span><code>$ make &amp;&amp; make install &amp;&amp; make clean
+</code></pre></div>
+If the first command fails the second one will never be executed. A final refinement is to use the or operator:
+<div class="highlight"><pre><span></span><code>$ cat file1 || cat file2 || cat file3
+</code></pre></div>
+In this case, you proceed until something succeeds and then you stop executing any further steps.</p>
+<h3 id="functions">Functions</h3>
+<p>A function is a code block that implements a set of operations. Functions are useful for executing procedures multiple times perhaps with varying input variables. Functions are also often called subroutines. Using functions in scripts requires two steps:</p>
+<ol>
+<li>Declaring a function</li>
+<li>Calling a function</li>
+</ol>
+<p>The function declaration requires a name which is used to invoke it. The proper syntax is:
+<div class="highlight"><pre><span></span><code>    function_name () {
+       command...
+    }
+</code></pre></div>
+For example, the following function is named display:
+<div class="highlight"><pre><span></span><code>    display () {
+       echo &quot;This is a sample function&quot;
+    }
+</code></pre></div>
+The function can be as long as desired and have many statements. Once defined, the function can be called later as many times as necessary. In the full example shown in the figure, we are also showing an often-used refinement: how to pass an argument to the function.  The first, second, ..., n-th argument can be referred to as <code>$1, $2, ..., $n</code>. The script name is referred as <code>$0</code>. All parameters are referred as <code>$*</code> and the total number of arguments is <code>$#</code>.
+<div class="highlight"><pre><span></span><code># cat script.sh
+#!/bin/bash
+echo The name of this program is: $0
+echo The first argument passed from the command line is: $1
+echo The second argument passed from the command line is: $2
+echo The third argument passed from the command line is: $3
+echo All of the arguments passed from the command line are : $*
+echo All done with $0
+exit 0
+#
+# ./script.sh A B C
+The name of this program is: ./script.sh
+The first argument passed from the command line is: A
+The second argument passed from the command line is: B
+The third argument passed from the command line is: C
+All of the arguments passed from the command line are : A B C
+All done with ./script.sh
+</code></pre></div></p>
+<h3 id="command-substitution">Command substitution</h3>
+<p>You may need to substitute the result of a command as a portion of another command. It can be done in two ways:</p>
+<ol>
+<li>By enclosing the inner command with backticks (`)</li>
+<li>By enclosing the inner command in $( )</li>
+</ol>
+<p>No matter the method, the innermost command will be executed in a newly launched shell environment, and the standard output of the shell will be inserted where the command substitution was done. Virtually any command can be executed this way. Both of these methods enable command substitution; however, the second method allows command nesting.
+<div class="highlight"><pre><span></span><code># cat ./count.sh
+#!/bin/bash
+echo &quot;The &quot; $1 &quot; contains &quot; $(wc -l &lt; $1) &quot; lines.&quot;
+echo $?
+# ./count.sh /var/log/messages
+The  /var/log/messages  contains  114  lines.
+0
+</code></pre></div>
+In the above example, the output of the inner command becomes the argument for the outer command.</p>
+<h3 id="the-if-statement">The if statement</h3>
+<p>Conditional decision making using an if statement, is a basic construct that any useful programming or scripting language must have. When an if statement is used, the ensuing actions depend on the evaluation of specified conditions such as:</p>
+<p><em>. Numerical or string comparisons
+</em>. Return value of a command (0 for success)
+*. File existence or permissions</p>
+<p>In compact form, the syntax of an if statement is:
+<div class="highlight"><pre><span></span><code>if TEST-COMMANDS; then CONSEQUENT-COMMANDS; fi
+</code></pre></div>
+A more general definition is:
+<div class="highlight"><pre><span></span><code>if condition
+then
+       statements
+else
+       statements
+fi
+</code></pre></div></p>
+<p>The following statement checks for a file argument, and if it is found, then it displays a message
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+if [ -f $1 ]
+then
+    echo &quot;The &quot; $1 &quot; contains &quot; $(wc -l &lt; $1) &quot; lines.&quot;;
+    echo $?
+fi
+# ./count.sh /etc/passwd
+The  /etc/passwd  contains  35  lines.
+0
+</code></pre></div></p>
+<p>Following options for file check</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-e file</td>
+<td>Check if the file exists.</td>
+</tr>
+<tr>
+<td>-d file</td>
+<td>Check if the file is a directory.</td>
+</tr>
+<tr>
+<td>-f file</td>
+<td>Check if the file is a regular file.</td>
+</tr>
+<tr>
+<td>-s file</td>
+<td>Check if the file is of non-zero size.</td>
+</tr>
+<tr>
+<td>-g file</td>
+<td>Check if the file has sgid set.</td>
+</tr>
+<tr>
+<td>-u file</td>
+<td>Check if the file has suid set.</td>
+</tr>
+<tr>
+<td>-r file</td>
+<td>Check if the file is readable.</td>
+</tr>
+<tr>
+<td>-w file</td>
+<td>Check if the file is writable.</td>
+</tr>
+<tr>
+<td>-x file</td>
+<td>Check if the file is executable.</td>
+</tr>
+</tbody>
+</table>
+<p>You can use the if statement to compare strings. The syntax is as follows:
+<div class="highlight"><pre><span></span><code>if [ string1 == string2 ]
+then
+   ACTION
+fi
+</code></pre></div></p>
+<p>Or to compare numbers, as follows:
+<div class="highlight"><pre><span></span><code>if [ exp1 OPERATOR exp2 ]
+then
+   ACTION
+fi
+</code></pre></div></p>
+<p>The options for operators are:</p>
+<p>Following options for file check</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-eq</td>
+<td>Equal to</td>
+</tr>
+<tr>
+<td>-ne</td>
+<td>Not equal to</td>
+</tr>
+<tr>
+<td>-gt</td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td>-lt</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td>-ge</td>
+<td>Greater than or equal to</td>
+</tr>
+<tr>
+<td>-le</td>
+<td>Less than or equal to</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2057,6 +3400,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2102,7 +3447,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "content.code.copy", "content.tabs.link", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

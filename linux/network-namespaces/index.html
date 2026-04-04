@@ -12,13 +12,13 @@
         <meta name="author" content="TC Pioneer">
       
       
-        <link rel="canonical" href="https://learn.tcpioneer.org/linux/setup/">
+        <link rel="canonical" href="https://learn.tcpioneer.org/linux/network-namespaces/">
       
       
-        <link rel="prev" href="../intro/">
+        <link rel="prev" href="../basic_networking/">
       
       
-        <link rel="next" href="../commands/">
+        <link rel="next" href="../virtual-networking/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Setup & Access - TCP Handbook</title>
+        <title>Network Namespaces - TCP Handbook</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup-and-access" class="md-skip">
+        <a href="#linux-network-namespaces" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup & Access
+              Network Namespaces
             
           </span>
         </div>
@@ -303,52 +303,26 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
-  
-    Introduction
-  
-
     
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
     
   
-    Setup & Access
+    <i class='fa-solid fa-terminal'></i> Basics
   
 
     
@@ -356,17 +330,35 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-terminal'></i> Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command_line_prompt/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup & Access
+    Command Line Prompt
   
 
     
@@ -375,81 +367,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#access-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Access Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-system-info" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check System Info
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-current-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check Current User
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-current-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check Current Directory
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -462,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
+      <a href="../basic_commands/" class="md-nav__link">
         
   
   
@@ -490,14 +407,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../filesystem/" class="md-nav__link">
+      <a href="../working_with_files/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    File System & Permissions
+    Working with Files
   
 
     
@@ -518,14 +435,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/" class="md-nav__link">
+      <a href="../file-system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Advanced & Concepts
+    File System
   
 
     
@@ -534,6 +451,1071 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file_permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Backup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swap_memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swap Memory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_manager_cont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager (Advanced)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Namespaces
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Namespaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux-network-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux Network Namespaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Network Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-operations-on-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic operations on namespaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-interfaces-to-network-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add interfaces to network namespaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba_server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared_storage_iscsi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared Storage (iSCSI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash_programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -571,7 +1553,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-brands fa-github'></i>Git & GitHub
+    <i class='fa-brands fa-github'></i> Git & GitHub
   
 
     
@@ -587,7 +1569,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-brands fa-github'></i>Git & GitHub
+    <i class='fa-brands fa-github'></i> Git & GitHub
   
 
           </label>
@@ -1097,7 +2079,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
   
 
     
@@ -1113,7 +2095,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
   
 
           </label>
@@ -1847,7 +2829,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-solid fa-list-check'></i> Assessment
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
   
 
     
@@ -1863,7 +2845,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-solid fa-list-check'></i> Assessment
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
   
 
           </label>
@@ -1904,6 +2886,116 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/role-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Role-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/attribute-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attribute-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1921,8 +3013,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1931,57 +3021,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-linux" class="md-nav__link">
+  <a href="#linux-network-namespaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install Linux
+        Linux Network Namespaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Network Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-operations-on-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic operations on namespaces
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#access-linux" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#add-interfaces-to-network-namespaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Access Linux
+        Add interfaces to network namespaces
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#check-system-info" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check System Info
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-current-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check Current User
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-current-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check Current Directory
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2002,30 +3076,131 @@
 
 
 
-<h1 id="setup-and-access">Setup and Access</h1>
-<h2 id="install-linux">Install Linux</h2>
-<ul>
-<li>dual boot with Windows</li>
-<li>virtual machine (VirtualBox / VMware)</li>
-<li>live USB</li>
-</ul>
-<hr />
-<h2 id="access-linux">Access Linux</h2>
-<ul>
-<li>terminal (CLI)</li>
-<li>SSH (remote access)</li>
-</ul>
-<hr />
-<h2 id="check-system-info">Check System Info</h2>
-<div class="highlight"><pre><span></span><code>uname -a
+  <h1>Network Namespaces</h1>
+
+<h3 id="linux-network-namespaces">Linux Network Namespaces</h3>
+<p>Dedicated networking devices use Virtual Routing and Forwarding (VRF), meaning that more than one virtual router (Layer 3 forwarding instance) can be run on the same physical device. In the Linux virtual networking space, the network namespaces allow separate instances of network interfaces and routing tables to operate independent of each other.</p>
+<h4 id="basic-operations-on-namespaces">Basic operations on namespaces</h4>
+<p>In Linux, yust be root for all operations which change the configuration of the network stack.</p>
+<p>Creating a network namespace</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip netns add Blue
+[root@centos-01 ~]# ip netns list
+Blue
+[root@centos-01 network-scripts]# ll /var/run/netns/
+total 0
+-r--r--r-- 1 root root 0 Feb 11 16:29 Blue
 </code></pre></div>
-<hr />
-<h2 id="check-current-user">Check Current User</h2>
-<div class="highlight"><pre><span></span><code>whoami
+<p>Each network namespace has its own loopback interface, its own routing table and its own iptables setup providing nat and filtering. </p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip netns exec Blue ip addr list
+1: lo: &lt;LOOPBACK&gt; mtu 65536 qdisc noop state DOWN
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
 </code></pre></div>
-<hr />
-<h2 id="check-current-directory">Check Current Directory</h2>
-<div class="highlight"><pre><span></span><code>pwd
+<p>Make sure to bring up that interface before to operate with the network namespace</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip netns exec Blue ip link set dev lo up
+[root@centos-01 ~]# ip netns exec Blue ifconfig
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</code></pre></div>
+<p>Network namespaces offer in addition the capability to run processes within the network namespace. For example, run a bash session in the Blue namespace</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip netns exec Blue bash
+[root@centos-01 ~]# ifconfig
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+[root@centos-01 ~]# netstat -nr
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+[root@centos-01 ~]# exit
+</code></pre></div>
+<p>Delete the namespace</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip netns add Yellow
+[root@centos-01 ~]# ip netns list
+Yellow
+Blue
+[root@centos-01 ~]# ip netns delete Yellow
+[root@centos-01 ~]# ip netns list
+Blue
+</code></pre></div>
+<h4 id="add-interfaces-to-network-namespaces">Add interfaces to network namespaces</h4>
+<p>To connect a network namespace to the outside world, attach a virtual interface to the “default” or “global” namespace where physical interfaces exist. To accomplish this, let's to create a couple of virtual interfaces, called <code>vetha</code> and <code>vethb</code></p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip link add vetha type veth peer name vethb
+</code></pre></div>
+<p>Attach <code>vethb</code> to the Blue namespace </p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip link set vethb netns Blue
+[root@centos-01 ~]# ip netns exec Blue ip link set dev vethb up
+[root@centos-01 ~]# ip netns exec Blue ifconfig
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 0  (Local Loopback)
+vethb: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500
+        ether 7e:e4:29:bc:9c:67  txqueuelen 1000  (Ethernet)
+</code></pre></div>
+<p>Virtual network interface <code>vetha</code> remain attacched to the global namespace</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip link set dev vetha up
+[root@centos-01 ~]# ifconfig
+ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 10.10.10.21  netmask 255.255.255.0  broadcast 10.10.10.255
+        inet6 fe80::20c:29ff:fe1e:6bf1  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 00:0c:29:1e:6b:f1  txqueuelen 1000  (Ethernet)
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 0  (Local Loopback)
+vetha: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet6 fe80::e899:ceff:fef6:3010  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether ea:99:ce:f6:30:10  txqueuelen 1000  (Ethernet)
+</code></pre></div>
+<p>Configure the virtual interface in global network namespace </p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip addr add 192.168.100.1/24 dev vetha
+[root@centos-01 ~]# route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         gateway         0.0.0.0         UG    100    0        0 ens32
+10.10.10.0      0.0.0.0         255.255.255.0   U     100    0        0 ens32
+192.168.100.0   0.0.0.0         255.255.255.0   U     0      0        0 vetha
+[root@centos-01 ~]#
+</code></pre></div>
+<p>and in the Blue network namespace</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip netns exec Blue ip addr add 192.168.100.2/24 dev vethb
+[root@centos-01 ~]# ip netns exec Blue route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.100.0   0.0.0.0         255.255.255.0   U     0      0        0 vethb
+[root@centos-01 ~]#
+</code></pre></div>
+<p>Both the namespaces, Blue and global are now reachable each other via virtual network interfaces</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ping 192.168.100.2
+PING 192.168.100.2 (192.168.100.2) 56(84) bytes of data.
+64 bytes from 192.168.100.2: icmp_seq=1 ttl=64 time=0.041 ms
+64 bytes from 192.168.100.2: icmp_seq=2 ttl=64 time=0.029 ms
+^C
+[root@centos-01 ~]# ip netns exec Blue ping 192.168.100.1
+PING 192.168.100.1 (192.168.100.1) 56(84) bytes of data.
+64 bytes from 192.168.100.1: icmp_seq=1 ttl=64 time=0.034 ms
+64 bytes from 192.168.100.1: icmp_seq=2 ttl=64 time=0.039 ms
+^C
+</code></pre></div>
+<p>But they are completly separated routing entities</p>
+<div class="highlight"><pre><span></span><code>[root@centos-01 ~]# ip netns exec Blue ping 10.10.10.1
+connect: Network is unreachable
+[root@centos-01 ~]#
+[root@centos-01 ~]# ping 10.10.10.1
+PING 10.10.10.1 (10.10.10.1) 56(84) bytes of data.
+64 bytes from 10.10.10.1: icmp_seq=1 ttl=64 time=0.545 ms
+64 bytes from 10.10.10.1: icmp_seq=2 ttl=64 time=0.369 ms
+^C
 </code></pre></div>
 
 
@@ -2044,6 +3219,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2089,7 +3266,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "content.code.copy", "content.tabs.link", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

@@ -1,0 +1,3507 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cybersecurity & Linux Learning Platform">
+      
+      
+        <meta name="author" content="TC Pioneer">
+      
+      
+        <link rel="canonical" href="https://learn.tcpioneer.org/linux/volume_manager_cont/">
+      
+      
+        <link rel="prev" href="../volume_manager/">
+      
+      
+        <link rel="next" href="../basic_networking/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Volume Manager (Advanced) - TCP Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#volume-manager-a-real-example" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TCP Handbook" class="md-header__button md-logo" aria-label="TCP Handbook" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TCP Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Volume Manager (Advanced)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TCP Handbook" class="md-nav__button md-logo" aria-label="TCP Handbook" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    TCP Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-house'></i> Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-brands fa-linux'></i> Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-brands fa-linux'></i> Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-terminal'></i> Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-terminal'></i> Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command_line_prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Prompt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working_with_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file_permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Backup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swap_memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swap Memory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager (Advanced)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager (Advanced)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#volume-manager-a-real-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume Manager, a real example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-namespaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Namespaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba_server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared_storage_iscsi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared Storage (iSCSI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash_programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-brands fa-github'></i> Git & GitHub
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-brands fa-github'></i> Git & GitHub
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/branching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Branching & Merging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced & Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-brands fa-docker'></i> Docker
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-brands fa-docker'></i> Docker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup & Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/images-containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Images & Containers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced & Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-brands fa-internet-explorer'></i> TCP/IP & OSI 
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-brands fa-internet-explorer'></i> TCP/IP & OSI 
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tcpip/osi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OSI Layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tcpip/ipv4-ipv6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IPv4 and IPv6 addresses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tcpip/router-switch-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Router, Switch and Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/nmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/nikto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nikto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/hydra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hydra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/sqlmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQLmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/netcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/hashcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hashcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/gobuster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobuster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/wireshark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireshark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/metasploit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metasploit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/burp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Burp Suite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/aircrack-ng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aircrack-ng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kali/john-the-ripper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    John the Ripper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-globe'></i> Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-globe'></i> Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/protocols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Communication Protocols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Management Protocols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Security Protocols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/other/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other Related Protocols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Discovery Protocols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Architectures, Mapping and Target Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/scanning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Scanning and Fingerprinting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Network Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-shield-alt'></i> Cryptography
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-shield-alt'></i> Cryptography
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cryptography/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cryptography Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/information-gathering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Gathering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/role-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Role-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/attribute-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attribute-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#volume-manager-a-real-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume Manager, a real example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Volume Manager (Advanced)</h1>
+
+<h2 id="volume-manager-a-real-example">Volume Manager, a real example</h2>
+<p>Let to see, step-by-step, a real example of Volume Manager on a CentOS 7 setup. 
+On the host caldera01 there is an additional disk <code>/dev/sdb</code> we want to use for store a mysql database.</p>
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# df -Th
+Filesystem             Type      Size  Used Avail Use% Mounted on
+/dev/mapper/os-root    xfs        50G  2.1G   48G   5% /
+devtmpfs               devtmpfs  3.8G     0  3.8G   0% /dev
+tmpfs                  tmpfs     3.8G     0  3.8G   0% /dev/shm
+tmpfs                  tmpfs     3.8G  8.6M  3.8G   1% /run
+tmpfs                  tmpfs     3.8G     0  3.8G   0% /sys/fs/cgroup
+/dev/mapper/os-data    xfs       175G  256M  175G   1% /data
+/dev/sda1              xfs       497M  190M  308M  39% /boot
+
+[root@caldera01 ~]# lsblk
+NAME                         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda                            8:0    0 232.9G  0 disk
+├─sda1                         8:1    0   500M  0 part /boot
+└─sda2                         8:2    0 232.4G  0 part
+  ├─os-swap                  253:0    0   7.8G  0 lvm  [SWAP]
+  ├─os-root                  253:1    0    50G  0 lvm  /
+  └─os-data                  253:2    0 174.6G  0 lvm  /data
+sdb                            8:16   0 232.9G  0 disk
+└─sdb1                         8:17   0 232.9G  0 part
+
+[root@caldera01 ~]# fdisk /dev/sdb
+Disk /dev/sdb: 250.1 GB, 250059350016 bytes, 488397168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x0003b431
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1            2048   488397167   244197560   8e  Linux LVM
+</code></pre></div>
+<p>Create a LVM layout
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# pvcreate /dev/sdb1
+[root@caldera01 ~]# vgcreate vgdb /dev/sdb1
+[root@caldera01 ~]# lvcreate -l 100%FREE -n lvol1 vgdb
+[root@caldera01 ~]# pvs
+  PV         VG   Fmt  Attr PSize   PFree
+  /dev/sda2  os   lvm2 a--  232.39g    0
+  /dev/sdb1  vgdb lvm2 a--  232.88g    0
+[root@caldera01 ~]# vgs
+  VG   #PV #LV #SN Attr   VSize   VFree
+  os     1   3   0 wz--n- 232.39g    0
+  vgdb   1   1   0 wz--n- 232.88g    0
+[root@caldera01 ~]# lvs
+  LV    VG   Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  data  os   -wi-ao---- 174.63g
+  root  os   -wi-ao----  50.00g
+  swap  os   -wi-ao----   7.77g
+  lvol1 vgdb -wi-ao---- 232.88g
+</code></pre></div></p>
+<p>Make an <code>ext3</code> file system on the logical volume and mount the partition under a <code>/db</code> directory 
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# mkfs -t ext3 /dev/vgdb/lvol1
+[root@caldera01 ~]# mkdir /db
+[root@caldera01 ~]# mount /dev/sdb1 /db
+</code></pre></div></p>
+<p>Install a mysql database on the new filesystem
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# sudo rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+[root@caldera01 ~]# yum install -y mysql-server
+[root@caldera01 ~]#  vi /etc/my.cnf
+[mysqld]
+...
+datadir=/db/mysql
+...
+[root@caldera01 ~]# systemctl start mysqld
+[root@caldera01 ~]# systemctl status mysqld
+[root@caldera01 ~]# systemctl enable mysqld
+</code></pre></div></p>
+<p>From GitHub, install a sample database with an integrated test suite, used to test your applications and database servers
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# yum install -y git
+[root@caldera01 ~]# git clone https://github.com/datacharmer/test_db.git
+[root@caldera01 ~]# cd /db/test_db
+</code></pre></div></p>
+<p>Load the test database
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# mysql &lt; employees.sql
+</code></pre></div></p>
+<p>If you want to install with two large partitioned tables, alternatively, run
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# mysql &lt; employees_partitioned.sql
+</code></pre></div></p>
+<p>Run the test suite
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# mysql  -t &lt; test_employees_md5.sql
++----------------------+
+| INFO                 |
++----------------------+
+| TESTING INSTALLATION |
++----------------------+
++--------------+------------------+----------------------------------+
+| table_name   | expected_records | expected_crc                     |
++--------------+------------------+----------------------------------+
+| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
+| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
+| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
+| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
+| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
+| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
++--------------+------------------+----------------------------------+
++--------------+------------------+----------------------------------+
+| table_name   | found_records    | found_crc                        |
++--------------+------------------+----------------------------------+
+| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
+| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
+| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
+| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
+| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
+| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
++--------------+------------------+----------------------------------+
++--------------+---------------+-----------+
+| table_name   | records_match | crc_match |
++--------------+---------------+-----------+
+| employees    | OK            | ok        |
+| departments  | OK            | ok        |
+| dept_manager | OK            | ok        |
+| dept_emp     | OK            | ok        |
+| titles       | OK            | ok        |
+| salaries     | OK            | ok        |
++--------------+---------------+-----------+
+</code></pre></div></p>
+<p>We want to add 2 additional LUNs via iSCSI protocol to the LVM layout. The iSCSI makes the system able to see the external LUNs as additional disks, called <code>/dev/sdc</code> and <code>/dev/sdd</code>
+Each additional disk is of 232.9G</p>
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# lsblk
+NAME                         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda                            8:0    0 232.9G  0 disk
+├─sda1                         8:1    0   500M  0 part /boot
+└─sda2                         8:2    0 232.4G  0 part
+  ├─os-swap                  253:0    0   7.8G  0 lvm  [SWAP]
+  ├─os-root                  253:1    0    50G  0 lvm  /
+  └─os-data                  253:2    0 174.6G  0 lvm  /data
+sdb                            8:16   0 232.9G  0 disk
+└─sdb1                         8:17   0 232.9G  0 part
+  └─vgdb-lvol1               253:4    0 232.9G  0 lvm  /db
+sdc                            8:32   0 232.9G  0 disk
+sdd                            8:48   0 232.9G  0 disk
+</code></pre></div>
+<p>Now let's to extend the LV <code>lvol1</code> by using the 2 additional LUNs
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# pvcreate -f /dev/sdc
+  Wiping iso9660 signature on /dev/sdc.
+  Wiping dos signature on /dev/sdc.
+  Physical volume &quot;/dev/sdc&quot; successfully created
+
+[root@caldera01 ~]# pvcreate -f /dev/sdd
+  Wiping dos signature on /dev/sdd.
+  Physical volume &quot;/dev/sdd&quot; successfully created
+
+[root@caldera01 ~]# pvscan
+  PV /dev/sda2   VG os     lvm2 [232.39 GiB / 0    free]
+  PV /dev/sdb1   VG vgdb   lvm2 [232.88 GiB / 0    free]
+  PV /dev/sdc              lvm2 [232.89 GiB]
+  PV /dev/sdd              lvm2 [232.89 GiB]
+
+[root@caldera01 ~]# vgextend vgdb /dev/sdc /dev/sdd
+  Volume group &quot;vgdb&quot; successfully extended
+
+[root@caldera01 ~]# vgscan
+  Reading all physical volumes.  This may take a while...
+  Found volume group &quot;os&quot; using metadata type lvm2
+  Found volume group &quot;vgdb&quot; using metadata type lvm2
+
+[root@caldera01 ~]# vgdisplay vgdb
+  --- Volume group ---
+  VG Name               vgdb
+  System ID
+  Format                lvm2
+  Metadata Areas        3
+  Metadata Sequence No  3
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               1
+  Max PV                0
+  Cur PV                3
+  Act PV                3
+  VG Size               698.64 GiB
+  PE Size               4.00 MiB
+  Total PE              178852
+  Alloc PE / Size       59618 / 232.88 GiB
+  Free  PE / Size       119234 / 465.76 GiB
+  VG UUID               O557zn-CcSI-1Ec4-LryC-uqi8-B42R-pYTHKU
+
+[root@caldera01 ~]# lvscan
+  ACTIVE            &#39;/dev/os/root&#39; [50.00 GiB] inherit
+  ACTIVE            &#39;/dev/os/data&#39; [174.63 GiB] inherit
+  ACTIVE            &#39;/dev/os/swap&#39; [7.77 GiB] inherit
+  ACTIVE            &#39;/dev/vgdb/lvol1&#39; [232.88 GiB] inherit
+
+[root@caldera01 ~]# lvextend -L +400G /dev/vgdb/lvol1
+  Size of logical volume vgdb/lvol1 changed from 232.88 GiB (59618 extents) to 632.88 GiB (162018 extents).
+  Logical volume lvol1 successfully resized
+[root@caldera01 ~]#
+
+[root@caldera01 ~]# lvscan
+  ACTIVE            &#39;/dev/os/root&#39; [50.00 GiB] inherit
+  ACTIVE            &#39;/dev/os/data&#39; [174.63 GiB] inherit
+  ACTIVE            &#39;/dev/os/swap&#39; [7.77 GiB] inherit
+  ACTIVE            &#39;/dev/vgdb/lvol1&#39; [632.88 GiB] inherit
+</code></pre></div></p>
+<p>Now the LV successfully increased its size by 632G but the file system still is 232G
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# df -Th
+Filesystem             Type      Size  Used Avail Use% Mounted on
+/dev/mapper/os-root    xfs        50G  2.1G   48G   5% /
+devtmpfs               devtmpfs  3.8G     0  3.8G   0% /dev
+tmpfs                  tmpfs     3.8G     0  3.8G   0% /dev/shm
+tmpfs                  tmpfs     3.8G  8.6M  3.8G   1% /run
+tmpfs                  tmpfs     3.8G     0  3.8G   0% /sys/fs/cgroup
+/dev/mapper/os-data    xfs       175G  256M  175G   1% /data
+/dev/sda1              xfs       497M  190M  308M  39% /boot
+/dev/mapper/vgdb-lvol1 ext3      230G  642M  217G   1% /db
+</code></pre></div></p>
+<p>Extend the file system without umount it
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# resize2fs -p /dev/vgdb/lvol1
+resize2fs 1.42.9 (28-Dec-2013)
+Filesystem at /dev/vgdb/lvol1 is mounted on /db; on-line resizing required
+old_desc_blocks = 15, new_desc_blocks = 40
+The filesystem on /dev/vgdb/lvol1 is now 165906432 blocks long.
+</code></pre></div></p>
+<p>Let's check our data file
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# cd /db/test_db
+[root@caldera01 ~]# mysql  -t &lt; test_employees_md5.sql
+
++----------------------+
+| INFO                 |
++----------------------+
+| TESTING INSTALLATION |
++----------------------+
++--------------+------------------+----------------------------------+
+| table_name   | expected_records | expected_crc                     |
++--------------+------------------+----------------------------------+
+| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
+| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
+| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
+| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
+| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
+| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
++--------------+------------------+----------------------------------+
++--------------+------------------+----------------------------------+
+| table_name   | found_records    | found_crc                        |
++--------------+------------------+----------------------------------+
+| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
+| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
+| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
+| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
+| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
+| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
++--------------+------------------+----------------------------------+
++--------------+---------------+-----------+
+| table_name   | records_match | crc_match |
++--------------+---------------+-----------+
+| employees    | OK            | ok        |
+| departments  | OK            | ok        |
+| dept_manager | OK            | ok        |
+| dept_emp     | OK            | ok        |
+| titles       | OK            | ok        |
+| salaries     | OK            | ok        |
++--------------+---------------+-----------+
+</code></pre></div></p>
+<p>Our data is safe! Now we want to resize the logical volume to use only 1 LUN instead of 2 LUNs as we made before. Firt of all, shutdown any service or application that is using the logical volume we want to resize. In our case, we have to stop the MySQL database running on the volume
+<div class="highlight"><pre><span></span><code>[root@caldera01 test_db]# systemctl stop mysql
+[root@caldera01 test_db]# systemctl status mysql
+mysqld.service - MySQL Community Server
+   Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled)
+   Active: inactive (dead) since Thu 2015-10-22 12:13:28 CEST; 2min 12s ago
+ Main PID: 15388 (code=exited, status=0/SUCCESS)
+</code></pre></div></p>
+<p>Make a backup of ALL yuor data present on the volume
+<div class="highlight"><pre><span></span><code>[root@caldera01 test_db]# tar cvf data_backup.tar *
+[root@caldera01 test_db]# gzip data_backup.tar
+[root@caldera01 test_db]# mv data_backup.tar /data_backup_folder
+</code></pre></div></p>
+<p>Umount the LV
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# umount /db
+</code></pre></div></p>
+<p>Then check for the file-system error (Must pass in every 5 steps of file-system check if not there might be some issue with your file-system)</p>
+<div class="highlight"><pre><span></span><code>[root@caldera01 /]# e2fsck -ff /dev/vgdb/lvol1
+e2fsck 1.42.9 (28-Dec-2013)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/vgdb/lvol1: 403/41484288 files (10.9% non-contiguous), 2803302/165906432 blocks
+</code></pre></div>
+<p>Now let's to resize the file system. Since we want to remove the last LUN, we have to calculate the final size of the file system by summing its original size <code>/dev/sdb1</code> to the size of the first added LUN <code>/dev/sdc</code>. We have <code>/dev/sdb1</code> Total PE 59618 + <code>/dev/sdc</code> Total PE 59617 = Total PE 119235. Total size, expressed in Megabyte are 4 x 119235 = 476940 MB</p>
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# pvdisplay
+--- Physical volume ---
+  PV Name               /dev/sdb1
+  VG Name               vgdb
+  PV Size               232.88 GiB / not usable 2.18 MiB
+  Allocatable           yes (but full)
+  PE Size               4.00 MiB
+  Total PE              59618
+  Free PE               0
+  Allocated PE          59618
+  PV UUID               mymhL6-Ta6m-cx3V-LjKM-Zo2T-K7Xj-MI1jb3
+
+  --- Physical volume ---
+  PV Name               /dev/sdc
+  VG Name               vgdb
+  PV Size               232.89 GiB / not usable 7.18 MiB
+  Allocatable           yes (but full)
+  PE Size               4.00 MiB
+  Total PE              59617
+  Free PE               0
+  Allocated PE          59617
+  PV UUID               0dIQWO-jjaa-zgl3-1o8E-8kGR-4xjc-BxPmwO
+
+  --- Physical volume ---
+  PV Name               /dev/sdd
+  VG Name               vgdb
+  PV Size               232.89 GiB / not usable 7.18 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              59617
+  Free PE               16834
+  Allocated PE          42783
+  PV UUID               Df0M7R-6KDB-TUeZ-l1Gw-2r5J-ci4c-MsyNw4
+
+[root@caldera01 ~]# fsadm -e -y resize /dev/vgdb/lvol1 476940M
+resize2fs 1.42.9 (28-Dec-2013)
+Resizing the filesystem on /dev/mapper/vgdb-lvol1 to 122096640 (4k) blocks.
+The filesystem on /dev/mapper/vgdb-lvol1 is now 122096640 blocks long.
+</code></pre></div>
+<p>Reduce the Logical Volume and remove the last LUN from the Volume Group
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# lvreduce -L 476940M /dev/vgdb/lvol1
+  WARNING: Reducing active logical volume to 465.76 GiB
+  THIS MAY DESTROY YOUR DATA (filesystem etc.)
+Do you really want to reduce lvol1? [y/n]: y
+  Size of logical volume vgdb/lvol1 changed from 632.88 GiB (162018 extents) to 465.76 GiB (119235 extents).
+  Logical volume lvol1 successfully resized
+
+[root@caldera01 ~]# vgreduce vgdb /dev/sdd
+  Removed &quot;/dev/sdd&quot; from volume group &quot;vgdb&quot;
+[root@caldera01 ~]#
+</code></pre></div></p>
+<p>Remove the physical volume
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# pvremove /dev/sdd
+  Labels on physical volume &quot;/dev/sdd&quot; successfully wiped
+[root@caldera01 ~]#
+</code></pre></div></p>
+<p>And check again the file system and mount back it
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# e2fsck -ff /dev/vgdb/lvol1
+e2fsck 1.42.9 (28-Dec-2013)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/vgdb/lvol1: 403/30531584 files (10.9% non-contiguous), 2116084/122096640 blocks
+[root@caldera01 ~]#
+
+[root@caldera01 ~]# mount /dev/vgdb/lvol1 /db
+[root@caldera01 ~]# df -Th /db
+Filesystem             Type  Size  Used Avail Use% Mounted on
+/dev/mapper/vgdb-lvol1 ext3  459G  653M  439G   1% /db
+[root@caldera01 ~]#
+</code></pre></div></p>
+<p>Start the mysql service and check for data integrity
+<div class="highlight"><pre><span></span><code>[root@caldera01 ~]# systemctl start mysqld
+[root@caldera01 ~]# cd /db/test_db/
+[root@caldera01 test_db]# mysql  -t &lt; test_employees_md5.sql
++----------------------+
+| INFO                 |
++----------------------+
+| TESTING INSTALLATION |
++----------------------+
++--------------+------------------+----------------------------------+
+| table_name   | expected_records | expected_crc                     |
++--------------+------------------+----------------------------------+
+| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
+| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
+| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
+| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
+| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
+| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
++--------------+------------------+----------------------------------+
++--------------+------------------+----------------------------------+
+| table_name   | found_records    | found_crc                        |
++--------------+------------------+----------------------------------+
+| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
+| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
+| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
+| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
+| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
+| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
++--------------+------------------+----------------------------------+
++--------------+---------------+-----------+
+| table_name   | records_match | crc_match |
++--------------+---------------+-----------+
+| employees    | OK            | ok        |
+| departments  | OK            | ok        |
+| dept_manager | OK            | ok        |
+| dept_emp     | OK            | ok        |
+| titles       | OK            | ok        |
+| salaries     | OK            | ok        |
++--------------+---------------+-----------+
++------------------+
+| computation_time |
++------------------+
+| 00:00:14         |
++------------------+
++---------+--------+
+| summary | result |
++---------+--------+
+| CRC     | OK     |
+| count   | OK     |
++---------+--------+
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+  <div class="custom-footer">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      © 2026 TC Pioneer
+    </div>
+
+    <!-- CENTER -->
+    <div class="footer-center">
+      Made with <span>❤️</span> by TCP
+    </div>
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <a href="https://instagram.com/tcpioneerorg">Instagram</a>
+      <a href="https://facebook.com/tcpioneerorg">Facebook</a>
+      <a href="https://linkedin.com/company/tcpioneerorg">LinkedIn</a>
+      <a href="https://discord.gg/CjW2TraS">Discord</a>
+    </div>
+
+  </div>
+
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "content.code.copy", "content.tabs.link", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>

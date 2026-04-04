@@ -12,13 +12,13 @@
         <meta name="author" content="TC Pioneer">
       
       
-        <link rel="canonical" href="https://learn.tcpioneer.org/linux/advanced/">
+        <link rel="canonical" href="https://learn.tcpioneer.org/linux/systemd/">
       
       
-        <link rel="prev" href="../filesystem/">
+        <link rel="prev" href="../system_info/">
       
       
-        <link rel="next" href="../../github/intro/">
+        <link rel="next" href="../user_env/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Advanced & Concepts - TCP Handbook</title>
+        <title>Systemd - TCP Handbook</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#advanced-concepts" class="md-skip">
+        <a href="#system-services" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Advanced & Concepts
+              Systemd
             
           </span>
         </div>
@@ -303,15 +303,62 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-terminal'></i> Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-terminal'></i> Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../command_line_prompt/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introduction
+    Command Line Prompt
   
 
     
@@ -332,35 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Setup & Access
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
+      <a href="../basic_commands/" class="md-nav__link">
         
   
   
@@ -388,14 +407,183 @@
   
   
     <li class="md-nav__item">
-      <a href="../filesystem/" class="md-nav__link">
+      <a href="../working_with_files/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    File System & Permissions
+    Working with Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file_permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-microchip'></i> System & Processes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Info
   
 
     
@@ -422,8 +610,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -432,7 +618,7 @@
   <span class="md-ellipsis">
     
   
-    Advanced & Concepts
+    Systemd
   
 
     
@@ -450,7 +636,7 @@
   <span class="md-ellipsis">
     
   
-    Advanced & Concepts
+    Systemd
   
 
     
@@ -466,8 +652,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -476,87 +660,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#package-management" class="md-nav__link">
+  <a href="#system-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Package Management
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#processes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Processes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Networking
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#users" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Users
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sudo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Environment Variables
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simple Flow
+        System Services
       
     </span>
   </a>
@@ -566,6 +673,820 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-database'></i> Package & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Backup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swap_memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swap Memory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_manager_cont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volume Manager (Advanced)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-network-wired'></i> Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-namespaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Namespaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-server'></i> Storage & Servers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba_server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared_storage_iscsi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared Storage (iSCSI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-diagram-project'></i> Cluster
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster-adv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-code'></i> Scripting & Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash_programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-shield-halved'></i> Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -604,7 +1525,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-brands fa-github'></i>Git & GitHub
+    <i class='fa-brands fa-github'></i> Git & GitHub
   
 
     
@@ -620,7 +1541,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-brands fa-github'></i>Git & GitHub
+    <i class='fa-brands fa-github'></i> Git & GitHub
   
 
           </label>
@@ -1130,7 +2051,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
   
 
     
@@ -1146,7 +2067,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools
+    <i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools
   
 
           </label>
@@ -1880,7 +2801,7 @@
   <span class="md-ellipsis">
     
   
-    <i class='fa-solid fa-list-check'></i> Assessment
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
   
 
     
@@ -1896,7 +2817,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    <i class='fa-solid fa-list-check'></i> Assessment
+    <i class='fa-solid fa-list-check'></i> Assessment && Methodology
   
 
           </label>
@@ -1937,6 +2858,116 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    <i class='fa-solid fa-key'></i> Access Control
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/role-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Role-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access-control/attribute-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attribute-Based Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1954,8 +2985,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1964,87 +2993,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#package-management" class="md-nav__link">
+  <a href="#system-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Package Management
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#processes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Processes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Networking
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#users" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Users
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sudo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Environment Variables
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simple Flow
+        System Services
       
     </span>
   </a>
@@ -2068,50 +3020,90 @@
 
 
 
-<h1 id="advanced-concepts">Advanced Concepts</h1>
-<h2 id="package-management">Package Management</h2>
-<div class="highlight"><pre><span></span><code>apt update
-apt upgrade
-apt install &lt;package&gt;
+  <h1>Systemd</h1>
+
+<h2 id="system-services">System Services</h2>
+<p>Systemd is the new init system for modern Linux distributions replacing the old init based on <code>/etc/init.d/script</code>. It provides many powerful features for starting, stopping and managing processes. Here is an example to create a MineCraft service for systemd. MainCraft is a Java based game from Mojang.</p>
+<p>First, install the game and its envinronment.
+<div class="highlight"><pre><span></span><code># yum install java-1.8.0-openjdk.x86_64
+# which java
+/bin/java
+# mkdir /root/Minecraft
+# cd /root/Minecraft
+# wget -O minecraft_server.jar https://s3.amazonaws.com/Minecraft.Download/versions/1.8.6/minecraft_server.1.8.6.jar
+# ls -lrt
+-rw-r--r--. 1 root root 9780573 May 25 11:47 minecraft_server.jar
+-rw-r--r--. 1 root root       2 Jun  1 11:48 whitelist.json
+-rw-r--r--. 1 root root     180 Jun  1 12:01 eula.txt
+drwxr-xr-x. 2 root root    4096 Jun  1 16:09 logs
+-rw-r--r--. 1 root root     785 Jun  1 16:09 server.properties
+-rw-r--r--. 1 root root       2 Jun  1 16:09 banned-players.json
+-rw-r--r--. 1 root root       2 Jun  1 16:09 banned-ips.json
+-rw-r--r--. 1 root root       2 Jun  1 16:09 ops.json
+-rw-r--r--. 1 root root     109 Jun  1 16:10 usercache.json
+drwxr-xr-x. 8 root root    4096 Jun  1 16:37 world
+</code></pre></div></p>
+<p>The MineCraft server can be started at command line, by issuing the following command
+<div class="highlight"><pre><span></span><code># java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+</code></pre></div></p>
+<p>Alternately, a systemd configuration file can be created to start, stop, and check the status of the server as a standard system service by using the <code>systemctl</code> utility
+<div class="highlight"><pre><span></span><code># vi /lib/systemd/system/minecraftd.service
+[Unit]
+Description=Minecraft Server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/Minecraft
+ExecStart=/bin/java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+SuccessExitStatus=143
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+# systemctl start minecraftd
+# systemctl status minecraftd
+minecraftd.service - Minecraft Server
+   Loaded: loaded (/usr/lib/systemd/system/minecraftd.service; disabled)
+   Active: active (running) since Mon 2015-06-01 16:00:12 UTC; 18s ago
+ Main PID: 20975 (java)
+   CGroup: /system.slice/minecraftd.service
+           └─20975 /bin/java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+
+# systemctl stop minecraftd
 </code></pre></div>
-<hr />
-<h2 id="processes">Processes</h2>
-<div class="highlight"><pre><span></span><code>ps → list processes
-top → real-time processes
-kill &lt;pid&gt; → stop process
-</code></pre></div>
-<hr />
-<h2 id="networking">Networking</h2>
-<div class="highlight"><pre><span></span><code>ifconfig
-ip a
-ping google.com
-</code></pre></div>
-<hr />
-<h2 id="users">Users</h2>
-<div class="highlight"><pre><span></span><code>adduser username
-passwd username
-</code></pre></div>
-<hr />
-<h2 id="sudo">Sudo</h2>
-<div class="highlight"><pre><span></span><code>sudo → run as root
-</code></pre></div>
-<hr />
-<h2 id="logs">Logs</h2>
-<div class="highlight"><pre><span></span><code>/var/log
-</code></pre></div>
-<hr />
-<h2 id="environment-variables">Environment Variables</h2>
-<div class="highlight"><pre><span></span><code>echo $PATH
-</code></pre></div>
-<hr />
-<h2 id="simple-flow">Simple Flow</h2>
-<ol>
-<li>navigate directories</li>
-<li>manage files</li>
-<li>install packages</li>
-<li>manage processes</li>
-<li>configure system</li>
-</ol>
+Note: the <code>SuccessExitStatus=143</code> is required when a process does not handle the exit signal properly. This is almost always due to programming errors, and is pretty common with Java applications of all types. To avoid a failed status of the MainCraft when stopping the service, the exit code 143 needs to be added into the unit file as a "success" exit status.</p>
+<p>The <code>systemctl</code> utility can be used to enable/disable the service at startup
+<div class="highlight"><pre><span></span><code># systemctl enable minecraftd
+ln -s &#39;/usr/lib/systemd/system/minecraftd.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/minecraftd.service&#39;
+# systemctl is-enabled minecraftd
+enabled
+# systemctl disable minecraftd
+</code></pre></div></p>
+<p>Here another example
+<div class="highlight"><pre><span></span><code># cat /etc/systemd/system/redmined.service
+[Unit]
+Description=Redmine Server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+WorkingDirectory=/home/redmine/redmine
+ExecStartPre=/usr/sbin/iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+ExecStart=/usr/bin/ruby bin/rails server -b 0.0.0.0 -p 8080 webrick -e production
+User=redmine
+Group=redmine
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=redmined
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div></p>
 
 
 
@@ -2129,6 +3121,8 @@ passwd username
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2174,7 +3168,7 @@ passwd username
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "content.code.copy", "content.tabs.link", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
