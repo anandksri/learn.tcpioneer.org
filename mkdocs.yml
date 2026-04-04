@@ -19,18 +19,24 @@ theme:
     code: JetBrains Mono
 
   features:
-    # - navigation.expand
     - navigation.top
     - navigation.footer
+    - navigation.instant
+    - toc.follow
     - content.code.copy
+    - content.tabs.link
     - search.highlight
     - search.suggest
 
 markdown_extensions:
   - attr_list
   - md_in_html
-  - pymdownx.superfences
+  - admonition
   - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
@@ -43,13 +49,48 @@ nav:
   - "<i class='fa-solid fa-house'></i> Home": index.md
 
   - "<i class='fa-brands fa-linux'></i> Linux":
-      - Introduction: linux/intro.md
-      - Setup & Access: linux/setup.md
-      - Basic Commands: linux/commands.md
-      - File System & Permissions: linux/filesystem.md
-      - Advanced & Concepts: linux/advanced.md
+      - "<i class='fa-solid fa-terminal'></i> Basics":
+          - Command Line Prompt: linux/command_line_prompt.md
+          - Basic Commands: linux/basic_commands.md
+          - Working with Files: linux/working_with_files.md
+          - File System: linux/file-system.md
+          - File Permissions: linux/file_permissions.md
 
-  - "<i class='fa-brands fa-github'></i>Git & GitHub":
+      - "<i class='fa-solid fa-microchip'></i> System & Processes":
+          - Processes: linux/processes.md
+          - System Info: linux/system_info.md
+          - Systemd: linux/systemd.md
+          - User Environment: linux/user_env.md
+
+      - "<i class='fa-solid fa-database'></i> Package & Storage":
+          - Package Management: linux/package_management.md
+          - Data Backup: linux/data_backup.md
+          - Swap Memory: linux/swap_memory.md
+          - Volume Manager: linux/volume_manager.md
+          - Volume Manager (Advanced): linux/volume_manager_cont.md
+
+      - "<i class='fa-solid fa-network-wired'></i> Networking":
+          - Basic Networking: linux/basic_networking.md
+          - Network Namespaces: linux/network-namespaces.md
+          - Virtual Networking: linux/virtual-networking.md
+
+      - "<i class='fa-solid fa-server'></i> Storage & Servers":
+          - NFS: linux/nfs.md
+          - Samba Server: linux/samba_server.md
+          - Shared Storage (iSCSI): linux/shared_storage_iscsi.md
+
+      - "<i class='fa-solid fa-diagram-project'></i> Cluster":
+          - Cluster Basics: linux/cluster-basics.md
+          - Cluster Advanced: linux/cluster-adv.md
+
+      - "<i class='fa-solid fa-code'></i> Scripting & Commands":
+          - Bash Programming: linux/bash_programming.md
+          - Text Commands: linux/text_commands.md
+
+      - "<i class='fa-solid fa-shield-halved'></i> Security":
+          - Basic Security: linux/basic_security.md
+
+  - "<i class='fa-brands fa-github'></i> Git & GitHub":
       - Introduction: github/intro.md
       - Setup & Config: github/setup.md
       - Basic Commands: github/commands.md
@@ -68,7 +109,7 @@ nav:
       - IPv4 and IPv6 addresses: tcpip/ipv4-ipv6.md
       - Router, Switch and Hub: tcpip/router-switch-hub.md
 
-  - "<i class='fa-solid fa-screwdriver-wrench'></i>Kali Tools":
+  - "<i class='fa-solid fa-screwdriver-wrench'></i> Kali Tools":
       - Nmap: kali/nmap.md
       - Nikto: kali/nikto.md
       - Hydra: kali/hydra.md
@@ -92,9 +133,12 @@ nav:
       - Network Scanning and Fingerprinting: networking/scanning.md
       - Testing Network Services: networking/testing.md
 
-
   - "<i class='fa-solid fa-shield-alt'></i> Cryptography":
       - Cryptography Basics: cryptography/basics.md
 
-  - "<i class='fa-solid fa-list-check'></i> Assessment":
+  - "<i class='fa-solid fa-list-check'></i> Assessment && Methodology":
       - Information Gathering: assessment/information-gathering.md
+
+  - "<i class='fa-solid fa-key'></i> Access Control":
+      - Role-Based Access Control: access-control/role-based-access-control.md
+      - Attribute-Based Access Control: access-control/attribute-based-access-control.md
