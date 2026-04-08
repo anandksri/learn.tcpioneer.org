@@ -25,9 +25,9 @@ Installing Python on Windows is a lot like installing any other program.
    Then click the button that downloads the latest version of Python.
 3. Run the installer.
 4. Make sure that the launcher gets installed and click Install Now.
+---
 
-    <div style="background:#1e2633; border-radius:8px; padding:18px; margin:20px 0; border-left:5px solid #4da3ff; text-align:center;">
-
+<div style="background:#1e2633; border-radius:8px; padding:18px; margin:20px 0; border-left:5px solid #4da3ff; text-align:center;">
 <strong>The py.exe launcher</strong>
 <br> <br>
 <img src="/assets/images/python/py-exe.png"  alt="The py.exe launcher - TCP Handbook" style="max-width:100%; border-radius:6px;">
@@ -62,8 +62,7 @@ going to make things easier later.
 1. Open a PowerShell from your start menu or start screen.
 2. Type `py` and press Enter. You should see something like this:
 
-    <div style="background:#1e2633; border-radius:8px; padding:18px; margin:20px 0; border-left:5px solid #4da3ff; text-align:center;">
-
+<div style="background:#1e2633; border-radius:8px; padding:18px; margin:20px 0; border-left:5px solid #4da3ff; text-align:center;">
 <strong>Python running in a PowerShell window</strong>
 <br> <br>
 <img src="/assets/images/python/powershell.png"  alt="Python running in a PowerShell window - TCP Handbook" style="max-width:100%; border-radius:6px;">
@@ -76,9 +75,9 @@ going to make things easier later.
     system, but most operating systems have some way to search for
     programs. Search for a program called terminal and launch it.
 2. Type `python3` and press Enter. You should see something like this:
+---
 
-    <div style="background:#1e2633; border-radius:8px; padding:18px; margin:20px 0; border-left:5px solid #4da3ff; text-align:center;">
-
+<div style="background:#1e2633; border-radius:8px; padding:18px; margin:20px 0; border-left:5px solid #4da3ff; text-align:center;">
 <strong>Running Python on my terminal</strong>
 <br> <br>
 <img src="/assets/images/python/terminal.png"  alt="Running Python on my terminal - TCP Handbook" style="max-width:100%; border-radius:6px;">

@@ -47,10 +47,9 @@ extra_javascript:
 
 extra:
   canonical_url: https://learn.tcpioneer.org
-  
+
 plugins:
   - search
-  - sitemap
 
 extra:
   generator: false
