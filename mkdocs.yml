@@ -1,5 +1,5 @@
 site_name: TCP Handbook
-site_description: Cybersecurity & Linux Learning Platform
+site_description: Learn Cybersecurity, Linux, Python, Networking & Ethical Hacking with practical tutorials and real-world examples.
 site_author: TC Pioneer
 site_url: https://learn.tcpioneer.org
 
@@ -44,6 +44,28 @@ extra_css:
 
 extra_javascript:
   - javascripts/custom.js
+
+extra:
+  canonical_url: https://learn.tcpioneer.org
+  
+plugins:
+  - search
+  - sitemap
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/anandksri
+
+extra_head:
+  - |
+    <meta name="keywords" content="cybersecurity tutorial, linux tutorial, python tutorial, ethical hacking, networking basics, kali linux tools, bug bounty, tcp handbook">
+    <meta name="author" content="TC Pioneer">
+    <meta property="og:title" content="TCP Handbook - Cybersecurity Learning Platform">
+    <meta property="og:description" content="Master Cybersecurity, Linux, Python and Ethical Hacking with structured tutorials.">
+    <meta property="og:url" content="https://learn.tcpioneer.org">
+    <meta property="og:type" content="website">
 
 nav:
   - "<i class='fa-solid fa-house'></i> Home": index.md
@@ -91,42 +113,42 @@ nav:
           - Basic Security: linux/basic_security.md
 
   - "<i class='fa-brands fa-python'></i> Python":
-    - "<i class='fa-solid fa-play'></i> Getting Started":
-      - Introduction: python/what-is-programming.md
-      - Getting Started: python/getting-started.md
-      - Installing Python: python/installing-python.md
-      - Editor Setup: python/editor-setup.md
+      - "<i class='fa-solid fa-play'></i> Getting Started":
+          - Introduction: python/what-is-programming.md
+          - Getting Started: python/getting-started.md
+          - Installing Python: python/installing-python.md
+          - Editor Setup: python/editor-setup.md
 
-    - "<i class='fa-solid fa-code'></i> Basics":
-      - Variables: python/variables.md
-      - Data Types (Dicts): python/dicts.md
-      - Strings: python/handy-stuff-strings.md
-      - Lists & Tuples: python/lists-and-tuples.md
+      - "<i class='fa-solid fa-code'></i> Basics":
+          - Variables: python/variables.md
+          - Data Types (Dicts): python/dicts.md
+          - Strings: python/handy-stuff-strings.md
+          - Lists & Tuples: python/lists-and-tuples.md
 
-    - "<i class='fa-solid fa-diagram-project'></i> Control Flow":
-      - If Statements: python/if.md
-      - Loops: python/loops.md
+      - "<i class='fa-solid fa-diagram-project'></i> Control Flow":
+          - If Statements: python/if.md
+          - Loops: python/loops.md
 
-    - "<i class='fa-solid fa-terminal'></i> Functions":
-      - Defining Functions: python/defining-functions.md
-      - Using Functions: python/using-functions.md
+      - "<i class='fa-solid fa-terminal'></i> Functions":
+          - Defining Functions: python/defining-functions.md
+          - Using Functions: python/using-functions.md
 
-    - "<i class='fa-solid fa-cubes'></i> Advanced Concepts":
-      - Classes: python/classes.md
-      - Modules: python/modules.md
-      - Exceptions: python/exceptions.md
-      - Docstrings: python/docstrings.md
+      - "<i class='fa-solid fa-cubes'></i> Advanced Concepts":
+          - Classes: python/classes.md
+          - Modules: python/modules.md
+          - Exceptions: python/exceptions.md
+          - Docstrings: python/docstrings.md
 
-    - "<i class='fa-solid fa-file'></i> File Handling":
-      - Files: python/files.md
+      - "<i class='fa-solid fa-file'></i> File Handling":
+          - Files: python/files.md
 
-    - "<i class='fa-solid fa-gears'></i> Practical":
-      - Larger Program: python/larger-program.md
-      - Zip & Enumerate: python/zip-and-enumerate.md
-      - The Way of the Program: python/the-way-of-the-program.md
+      - "<i class='fa-solid fa-gears'></i> Practical":
+          - Larger Program: python/larger-program.md
+          - Zip & Enumerate: python/zip-and-enumerate.md
+          - The Way of the Program: python/the-way-of-the-program.md
 
-    - "<i class='fa-solid fa-question'></i> Extras":
-      - Answers: python/answers.md
+      - "<i class='fa-solid fa-question'></i> Extras":
+          - Answers: python/answers.md
 
   - "<i class='fa-brands fa-github'></i> Git & GitHub":
       - Introduction: github/intro.md
@@ -180,5 +202,3 @@ nav:
   - "<i class='fa-solid fa-key'></i> Access Control":
       - Role-Based Access Control: access-control/role-based-access-control.md
       - Attribute-Based Access Control: access-control/attribute-based-access-control.md
-
-
