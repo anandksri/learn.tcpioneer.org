@@ -1,6 +1,6 @@
-# The Cyber Pioneer Learning
+# TC Pioneer Learning
 
-The Cyber Pioneer Learning is a practical cybersecurity learning repository containing structured documentation, tutorials, references, and supporting assets.
+TC Pioneer Learning is a practical cybersecurity learning repository containing structured documentation, tutorials, references, and supporting assets.
 
 ## About
 
@@ -31,7 +31,7 @@ Suggestions, corrections, additional examples, and improvements are welcome. For
 
 ## Project
 
-This repository is part of The Cyber Pioneer ecosystem and my broader work in cybersecurity education, security research, and software development.
+This repository is part of the TC Pioneer ecosystem and my broader work in cybersecurity education, security research, and software development.
 
 ## Author
 
